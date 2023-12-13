@@ -44,4 +44,24 @@
             background-color: transparent;
         }
     }
+    &__projects{
+        background-color: $main-color-2; 
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        @media  (max-width: 600px) {
+           clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        }
+        &-border {
+            height: 3px;
+            background: $accent-color-1;
+            width: 100%;
+        }
+        &-fixed-border {
+            @include style-top-border;
+        }
+        &-trigger-element {
+            height: 1px;
+            background-color: transparent;
+        }
+        
+    }
 }
