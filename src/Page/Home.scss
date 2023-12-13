@@ -26,4 +26,22 @@
         margin-top: 100vh;
         background-color: $main-color-1;
     }
+    &__presentation {
+        background-color: $main-color-1;
+    
+        &-border {
+            height: 3px;
+            background: $accent-color-1; 
+            width: 100%;
+        }
+    
+        &-fixed-border {
+            @include style-top-border;
+        }
+    
+        &-trigger-element {
+            height: 3px;
+            background-color: transparent;
+        }
+    }
 }

@@ -1,8 +1,31 @@
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import Banner from "../Components/Banner/Banner";
 import Navbar from "../Components/Navbar/Navbar";
+import Presentation from "../Components/Presentation/Presentation";
 
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home () {
+
+    const presentationRef = useRef(null);
+    const presentationBorderRef = useRef(null);
+
+    useEffect(() => {
+
+        gsap.to(presentationBorderRef.current, {
+            scrollTrigger: {
+                trigger: presentationRef.current,
+                start: "top top",
+                endTrigger: ".home__presentation-trigger-element",
+                end: "bottom top",
+                scrub: true,
+                toggleClass: { targets: presentationBorderRef.current, className: "home__presentation-fixed-border" } 
+            }
+        });
+    }, []);
 
 
     return (
@@ -14,8 +37,10 @@ export default function Home () {
                 <Banner/>
             </section>
             <div className="home__content" id="content">
-                <section className='home__presentation'  id="presentation">
-                    <p>Présentation</p>
+                <section className='home__presentation' ref={presentationRef} id="presentation">
+                <div className="home__presentation-border" ref={presentationBorderRef}></div>
+                    <Presentation/>
+                    <div className="home__presentation-trigger-element"></div>
                 </section>
                 <section className='home__projects'  id="projects">
                 <p>Projects</p>

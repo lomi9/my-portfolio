@@ -1,0 +1,71 @@
+@import "../../styles/utilities.scss";
+
+
+
+.presentation {
+    padding: 200px 100px 0 100px;
+    font-size: 3rem;
+    text-align: justify;
+    font-family: $font-family-1;
+    &__title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        &-1{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 4rem;
+            color: $big-title-color-1;
+            font-family: $big-font;
+        }
+        &-2{
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: $title-color-1;
+            align-content: center;
+            font-family: $title-font-1;
+
+        }
+    }
+
+    &__content {
+        padding-top: 150px;
+        display: flex;
+        width: 100%;
+        &-left{
+        width: 60%;
+        font-size: 1.5rem;
+        }
+        &-right{
+        width: 40%;
+
+        }
+    }
+}
+
+@media (max-width: 768px ) {
+
+    .presentation {
+        padding: 10% 10% 0 10%;
+        justify-content: flex-start;
+        &__title-1{
+            font-size: 2rem;
+        }
+        &__title-2{
+            font-size: 1.5rem;
+        }
+        &__content{
+            display: flex;
+            flex-direction: column;
+            &-left{
+                width: 100%;
+            }
+        }
+    }
+}

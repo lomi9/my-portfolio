@@ -1,6 +1,9 @@
 // Fonts
 $title-font-1 : 'EB Garamond', serif;
+$font-family-1 : 'Darker Grotesque', sans-serif;
 $font-family-2 : 'Poiret One', sans-serif;
+
+$big-font : 'Rammetto One', sans-serif;
 
 // Colors
 $main-color-1 : #F3EDE2;
@@ -11,9 +14,18 @@ $accent-color-1 : #FF6D33;
 $navbar-background-color : #F5F5F5;
 $navbar-border-color : #F5F5F5;
 
+$big-title-color-1 : #EDDAD4;
+$title-color-1 : #671320;
+
 
 @mixin navbar-link {
     text-decoration: none;
     cursor: pointer;font-family: 'Poiret One', sans-serif;
     font-size: 1.5rem;
+}
+
+@mixin style-top-border {
+    position: fixed;
+    top: 0;
+    z-index: 5;
 }
