@@ -1,0 +1,12 @@
+@import "../Page/Home.scss";
+
+@import "../Components/Banner/Banner.scss";
+@import "../Components/Navbar/Navbar.scss";
+@import "../Components/Navbar/NavItems.scss";
+
+
+* {
+    background-color: transparent;
+    box-sizing: border-box;
+    max-width: 1800px;
+}

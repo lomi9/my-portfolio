@@ -1,0 +1,89 @@
+@import "../../styles/utilities.scss";
+
+
+.home__banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;   
+    &-title{
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        &-h1{
+            width: 100%;
+            justify-content: flex-start;
+            font-family: $title-font-1;
+            color: $main-color-2;
+            font-size: 4rem;
+            font-weight: 600;
+            z-index:1;
+        }
+    }
+    &-text{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        color: $main-color-2;
+        font-size: 2rem;
+        padding: 20px;
+        font-family: $font-family-2;
+    }
+    &-icon {
+        text-align: center;
+        font-size: 2em;
+        position: absolute;
+        bottom: 10px; 
+        width: 100%;
+        align-items: center;
+        color: $main-color-2;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px ) {
+    .home__banner-content {
+        &-title{
+            &-h1{
+                font-size: 3rem;
+            }
+        }
+        &-text{
+            font-size: 1.5rem;
+        }
+ 
+    }
+}
+    
+    @media (max-width: 768px ) {
+        .home__banner-content {
+            &-title{
+                &-h1{
+                    font-size: 2.5rem;
+                }
+            }
+            &-text{
+                font-size: 1rem;
+                padding-top: 0;
+            }
+        }
+}
+
+@media (max-width: 440px ) {
+    .home__banner-content {
+        &-title{
+            &-h1{
+                font-size: 1.8rem;
+            }
+        }
+        &-text{
+            font-size: 0.8rem;
+            padding-top: 0;
+        }
+    }
+}

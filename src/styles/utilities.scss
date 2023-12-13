@@ -1,0 +1,19 @@
+// Fonts
+$title-font-1 : 'EB Garamond', serif;
+$font-family-2 : 'Poiret One', sans-serif;
+
+// Colors
+$main-color-1 : #F3EDE2;
+$main-color-2 : #250902;
+
+$accent-color-1 : #FF6D33;
+
+$navbar-background-color : #F5F5F5;
+$navbar-border-color : #F5F5F5;
+
+
+@mixin navbar-link {
+    text-decoration: none;
+    cursor: pointer;font-family: 'Poiret One', sans-serif;
+    font-size: 1.5rem;
+}

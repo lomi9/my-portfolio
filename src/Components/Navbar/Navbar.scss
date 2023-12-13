@@ -1,0 +1,90 @@
+@import "../../styles/utilities.scss";
+
+.navbar {
+
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    align-items: center;
+    background-color: transparent;
+    font-family: $font-family-2;
+
+    &__hamburger {
+        display: none; 
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: $main-color-1;
+      }
+
+    &__menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $navbar-background-color;
+        border: 1px $navbar-border-color solid;
+        z-index: 2;
+        width: 450px;
+        height: 50px;
+        border-radius: 50px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        &-content{
+            display: flex;
+            justify-content: center;
+            gap: 25%;
+
+        }
+
+        
+        &-border{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        &-open {
+            display: none;
+          }
+
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+      &__hamburger {
+        display: block;
+      }
+  
+      &__menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 500px;
+        background: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 3rem; 
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+
+&-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem; 
+  }
+
+  &-open {
+    display: flex;
+    transform: translateX(0); 
+  }
+}
+
+}
+}
