@@ -5,6 +5,7 @@ import Banner from "../Components/Banner/Banner";
 import Navbar from "../Components/Navbar/Navbar";
 import Presentation from "../Components/Presentation/Presentation";
 import Projects from '../Components/Projects/Projects';
+import Contact from '../Components/Contact/Contact';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -38,6 +39,7 @@ export default function Home () {
                 <Banner/>
             </section>
             <div className="home__content" id="content">
+                <div className='home__div-1'>
                 <section className='home__presentation' ref={presentationRef} id="presentation">
                 <div className="home__presentation-border" ref={presentationBorderRef}></div>
                     <Presentation/>
@@ -49,8 +51,9 @@ export default function Home () {
                 <section className='home__tools' id="tools">
                     <p>Tools</p>
                 </section>
+                </div>
                 <section className='home__contact' id="contact">
-                    <p>contact</p>
+                    <Contact/>
                 </section>
                 <div className='home__footer'>
                 <p>Footer</p>

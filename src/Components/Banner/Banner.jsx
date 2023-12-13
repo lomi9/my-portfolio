@@ -59,7 +59,7 @@ export default function Banner ( ) {
 
     return (
         <div className="home__banner-content" id='vanta-background' ref={vantaRef}>
-        <div className="home__banner-content-title ">
+        <div className="home__banner-content-title">
             <h1 className='home__banner-content-title-h1'>L</h1>
         </div>
         <p className="home__banner-content-text">Développeuse web en recherche d'apprentissage</p>

@@ -1,0 +1,120 @@
+@import "../../styles/utilities.scss";
+
+.contact{
+    padding: 0 100px 0 100px;
+    font-size: 3rem;
+    font-family: $font-family-1;
+
+    &__title {
+        width: 100%;
+        display: flex;
+        position: relative;
+        &-1{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 4rem;
+            color: $big-title-color-1;
+            font-family: $big-font;
+        }
+        &-2{
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: $title-color-1;
+            align-content: center;
+            font-family: $title-font-1;
+
+        }
+    }
+}
+
+.contact__form {
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: auto;
+    font-family: $font-family-1;
+    font-size: 1.5rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &-name{
+        display: flex;
+        flex-direction: column;
+
+        &-label{
+            padding-bottom: 20px;
+            color: $main-color-2;
+            font-weight: 600;
+
+        }
+        &-input {
+            border-style: none;
+            border-bottom: 2px solid $accent-color-1;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    &-email{
+        display: flex;
+        flex-direction: column;
+
+        &-label{
+            padding-bottom: 20px;
+            color: $main-color-2;
+            font-weight: 600;
+
+        }
+        &-input{
+            border-style: none;
+            border-bottom: 2px solid $accent-color-1;
+            &:focus{
+                outline: none;
+            }
+
+        }
+    }
+
+    &-message{
+        display: flex;
+        flex-direction: column;
+
+        &-label{
+            padding-bottom: 20px;
+            color: $main-color-2;
+            font-weight: 600;
+        }
+        &-input{
+            border-style: none;
+            border-bottom: 2px solid $accent-color-1;
+            height: 100px;
+            &:focus{
+                outline: none;
+            }
+
+        }
+    }
+
+    &-button{
+        display: flex;
+        justify-content: center;
+        background-color: $accent-color-1;
+        font-family: $font-family-1;
+        border: none;
+        width: 100px;
+        font-size: 1.3rem;
+        border-radius: 50px;
+        color: $main-color-1;
+        font-weight: 600;
+    }
+}
+

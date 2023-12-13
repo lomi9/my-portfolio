@@ -24,7 +24,7 @@
         position: relative;
         z-index: 2;
         margin-top: 100vh;
-        background-color: $main-color-1;
+        background-color: transparent;
     }
     &__presentation {
         background-color: $main-color-1;
@@ -63,5 +63,30 @@
             background-color: transparent;
         }
         
+    }
+    &__contact{
+        background-color: #FFE7D6;
+        clip-path: polygon(0% 0%, 56% 0, 71% 48%, 56% 100%, 0% 100%);
+        //clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        padding-top: 200px;
+        padding-left: 10%;
+        display: flex;
+        justify-content: flex-start;
+        &-border {
+            height: 3px;
+            background: $accent-color-1;
+            width: 100%;
+            display: none;
+        }
+        &-fixed-border{
+            @include style-top-border;
+        }
+        &-trigger-element {
+            height: 1px;
+            background-color: transparent;
+        }
+    }
+    &__div-1{
+        background-color: $main-color-1;
     }
 }
