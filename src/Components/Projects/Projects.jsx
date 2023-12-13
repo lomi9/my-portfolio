@@ -15,7 +15,9 @@ export default function Projects () {
             tags: ["HTML", "CSS"],
             image: Booki,
             github: "https://github.com/lomi9/projet_2",
-            live: "https://lomi9.github.io/projet_2"
+            live: "https://lomi9.github.io/projet_2",
+            description : "Description description description description description description description description description description"
+
         },
         {
             title: "Sophie Bluel - Architecte",
@@ -23,7 +25,9 @@ export default function Projects () {
             tags: ["HTML", "CSS", "JavaScript"],
             image: SophieBluel,
             github: "https://github.com/lomi9/projet_3",
-            live: "https://lomi9.github.io/projet_3"
+            live: "https://lomi9.github.io/projet_3",
+            description : "Description description description description description description description description description description"
+
         },
         {
             title: "Nina Carducci - Photographe",
@@ -31,7 +35,9 @@ export default function Projects () {
             tags: ["HTML", "CSS", "JavaScript"],
             image: NinaCarducci,
             github: "https://github.com/lomi9/projet_5",
-            live: "https://lomi9.github.io/projet_5"
+            live: "https://lomi9.github.io/projet_5",
+            description : "Description description description description description description description description description description"
+
         },
         {
             title: "Kasa",
@@ -39,7 +45,9 @@ export default function Projects () {
             tags: ["REACT", "SASS"],
             image: Kasa,
             github: "https://github.com/lomi9/projet_6",
-            live: "https://lomi9.github.io/projet_6/"
+            live: "https://lomi9.github.io/projet_6/",
+            description : "Description description description description description description description description description description"
+
         },
         {
             title: "Mon vieux grimoire",
@@ -47,7 +55,9 @@ export default function Projects () {
             tags: ["Node.JS", "ExpressJS"],
             image: MonVieuxGrimoire,
             github: "https://github.com/lomi9/projet_7",
-            live: "lien_vers_version_live"
+            live: "lien_vers_version_live",
+            description : "Description description description description description description description description description description"
+
         },
         {
             title: "Mon Portfolio",
@@ -55,7 +65,9 @@ export default function Projects () {
             tags: ["React", "Sass", "Gsap"],
             image: Portfolio,
             github: "https://github.com/lomi9/portfolio",
-            live: "lien_vers_version_live"
+            live: "lien_vers_version_live",
+            description : "Description description description description description description description description description description"
+
         },
 
     ];

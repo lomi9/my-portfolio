@@ -8,14 +8,23 @@ $big-font : 'Rammetto One', sans-serif;
 // Colors
 $main-color-1 : #F3EDE2;
 $main-color-2 : #250902;
+$main-color-3 : #EDDAD4;
+$main-color-4 : #623030;
 
-$accent-color-1 : #FF6D33;
+//$accent-color-1 : #FF6D33;
+$accent-color-1 : #FE5F55;
+$accent-color-2 : #DEED5B;
 
 $navbar-background-color : #F5F5F5;
 $navbar-border-color : #F5F5F5;
 
 $big-title-color-1 : #EDDAD4;
 $title-color-1 : #671320;
+
+//Styles : 
+
+$top-color-border-height : 7px;
+$side-page-desktop-padding : 10%;
 
 
 @mixin navbar-link {
@@ -25,7 +34,20 @@ $title-color-1 : #671320;
 }
 
 @mixin style-top-border {
-    position: fixed;
     top: 0;
-    z-index: 5;
+}
+
+@mixin card-border-color{
+    background-color: #140501;
+    background-image: linear-gradient(45deg, #140501 7%, #afa297 41%, #ffffff 63%, #c8abc5 85%);
+        
+}
+
+@mixin card-background{
+  //  background-color: #250902;
+  //  background-image: linear-gradient(43deg, #250902 19%, #867384 53%, #331e12 86%);
+  background: #B79891;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #94716B, #B79891);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #94716B, #B79891); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }

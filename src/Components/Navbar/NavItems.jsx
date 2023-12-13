@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap, Elastic } from 'gsap';
 import { Link } from 'react-scroll';
 
-export default function NavItem({ item, href, onClick  }) {
+export default function NavItem({ item, href, onClick }) {
     const circleRef = useRef(null);
     const linkRef = useRef(null);
 
@@ -31,10 +31,10 @@ export default function NavItem({ item, href, onClick  }) {
     }, []);
 
     return (
-        <div className="navbar__menu-item-wrapper" ref={linkRef}>
+        <div className="navbar__menu-item-wrapper" ref={linkRef} onClick={onClick}>
             <Link to={href} smooth={true} duration={500} className="navbar__menu-items">
-        {item}
-      </Link>
+                {item}
+            </Link>
             <div className="circle" ref={circleRef}></div>
         </div>
     );

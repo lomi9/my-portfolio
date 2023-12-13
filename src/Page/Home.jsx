@@ -14,6 +14,8 @@ export default function Home () {
 
     const presentationRef = useRef(null);
     const presentationBorderRef = useRef(null);
+    const projectRef = useRef(null);
+    const projectBorderRef = useRef(null);
 
     useEffect(() => {
 
@@ -22,9 +24,19 @@ export default function Home () {
                 trigger: presentationRef.current,
                 start: "top top",
                 endTrigger: ".home__presentation-trigger-element",
-                end: "bottom top",
+                end: "bottom center",
                 scrub: true,
                 toggleClass: { targets: presentationBorderRef.current, className: "home__presentation-fixed-border" } 
+            }
+        });
+        gsap.to(projectBorderRef.current, {
+            scrollTrigger: {
+                trigger: projectRef.current,
+                start: "top top",
+                endTrigger: ".home__project-trigger-element",
+                end: "bottom center",
+                scrub: true,
+                toggleClass: { targets: projectBorderRef.current, className: "home__project-fixed-border" } 
             }
         });
     }, []);
@@ -43,14 +55,16 @@ export default function Home () {
                 <section className='home__presentation' ref={presentationRef} id="presentation">
                 <div className="home__presentation-border" ref={presentationBorderRef}></div>
                     <Presentation/>
-                    <div className="home__presentation-trigger-element"></div>
                 </section>
-                <section className='home__projects'  id="projects">
+                <section className='home__project' ref={projectRef} id="projects">
+                <div className="home__project-border" ref={projectBorderRef}></div>
                     <Projects/>
                 </section>
                 <section className='home__tools' id="tools">
                     <p>Tools</p>
+                    <div className="home__project-trigger-element"></div>
                 </section>
+                <div className="home__presentation-trigger-element"></div>
                 </div>
                 <section className='home__contact' id="contact">
                     <Contact/>

@@ -28,35 +28,49 @@
     }
     &__presentation {
         background-color: $main-color-1;
+        margin-bottom: -220px;
     
         &-border {
-            height: 3px;
+            height: $top-color-border-height;
             background: $accent-color-1; 
             width: 100%;
         }
     
         &-fixed-border {
             @include style-top-border;
+            position: fixed;
+            z-index: 5;
         }
     
         &-trigger-element {
-            height: 3px;
+            height: 5px;
             background-color: transparent;
         }
     }
-    &__projects{
-        background-color: $main-color-2; 
+    &__project{
+        background-color:#2E0F1B; 
+        padding: $side-page-desktop-padding;
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        margin-top: 50px;
+        @media  (max-width: 1320px) {
+            clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 100%);
+         }
+         @media  (max-width: 1310px) {
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+         }
         @media  (max-width: 600px) {
            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
         }
         &-border {
-            height: 3px;
-            background: $accent-color-1;
+            height: $top-color-border-height;
+            background: $accent-color-2;
             width: 100%;
+            z-index: 0;
         }
         &-fixed-border {
             @include style-top-border;
+            position: fixed;
+            z-index: 10000;
         }
         &-trigger-element {
             height: 1px;

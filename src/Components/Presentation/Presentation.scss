@@ -3,7 +3,7 @@
 
 
 .presentation {
-    padding: 200px 100px 0 100px;
+    padding: $side-page-desktop-padding;
     font-size: 3rem;
     text-align: justify;
     font-family: $font-family-1;
@@ -19,6 +19,7 @@
             font-size: 4rem;
             color: $big-title-color-1;
             font-family: $big-font;
+            padding: 100px 0;
         }
         &-2{
             position: absolute;
@@ -30,17 +31,42 @@
             color: $title-color-1;
             align-content: center;
             font-family: $title-font-1;
+            padding: 100px 0;
 
         }
     }
 
     &__content {
-        padding-top: 150px;
         display: flex;
         width: 100%;
         &-left{
         width: 60%;
         font-size: 1.5rem;
+        &-top{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-start;
+            margin-left: -5%;
+            &-icon{
+                font-size: 4rem;
+                color: $main-color-2;
+            }
+
+        }
+        &-bottom{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-end;
+            width: 105%;
+            &-icon{
+                font-size: 4rem;
+                color: $title-color-1;
+                z-index: 100;
+            }
+
+        }
         }
         &-right{
         width: 40%;
@@ -52,7 +78,6 @@
 @media (max-width: 768px ) {
 
     .presentation {
-        padding: 10% 10% 0 10%;
         justify-content: flex-start;
         &__title-1{
             font-size: 2rem;
