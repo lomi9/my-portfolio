@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap, Elastic } from 'gsap';
-import { Link, Element } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 export default function NavItem({ item, href, onClick  }) {
     const circleRef = useRef(null);

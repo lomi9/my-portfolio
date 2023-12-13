@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import { Link, Element } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 
 
@@ -53,9 +53,6 @@ export default function Banner ( ) {
         });
     }, []);
 
-    const scrollToContent = () => {
-        gsap.to(window, { duration: 1, scrollTo: '#content' });
-      };
 
     return (
         <div className="home__banner-content" id='vanta-background' ref={vantaRef}>
