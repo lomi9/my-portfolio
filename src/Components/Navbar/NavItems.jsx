@@ -31,8 +31,8 @@ export default function NavItem({ item, href, onClick }) {
     }, []);
 
     return (
-        <div className="navbar__menu-item-wrapper" ref={linkRef} onClick={onClick}>
-            <Link to={href} smooth={true} duration={500} className="navbar__menu-items">
+        <div className="navbar__menu-item-wrapper" ref={linkRef}>
+            <Link to={href} smooth={true} duration={500} className="navbar__menu-items" onClick={() => onClick(href)}>
                 {item}
             </Link>
             <div className="circle" ref={circleRef}></div>

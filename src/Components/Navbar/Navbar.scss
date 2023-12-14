@@ -1,7 +1,6 @@
 @import "../../styles/utilities.scss";
 
 .navbar {
-
     display: flex;
     justify-content: center;
     padding-top: 2rem;
@@ -9,16 +8,11 @@
     background-color: transparent;
     font-family: $font-family-2;
 
-    &__hamburger {
+    &__mobile {
         display: none; 
-        cursor: pointer;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: $main-color-2;
       }
 
-    &__menu{
+    &__desktop{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -35,65 +29,63 @@
             gap: 25%;
 
         }
-
-        
-        &-border{
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-        }
-        &-open {
-            display: none;
-          }
-
     }
 }
 
 
 
 @media (max-width: 768px) {
-    .navbar {
-      display: flex;
-      justify-content: flex-start;
-      padding: 20px;
-      &__hamburger {
-        display: flex;
-      }
-  
-      &__menu {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.2);
+
+  .navbar {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+
+    &__desktop{
+      display: none;
+  }
+    &__mobile {
+        display: flex; 
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 2rem 20px; 
-        border-radius: 0;
-        border: none;
-        box-shadow: none;
-        height: auto;
-        z-index: 1000;
+        padding-left: 3%;
+        &-hamburger{
+          background-color: $main-color-1;
+          border: 2px solid $accent-color-1;
+          border-radius: 50px;
+          color: $main-color-2;
+          width: 50px;
+          height: 50px;
+          font-size: 1.5rem;
+          z-index: 21;
+          cursor: pointer;
+          &:hover{
+          @include zoom-effect;
+        }
+        }
+        &-content{
+          display: none;
+          &.show{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding-top: 120px;
+            padding-left: 20px;
+            background-color: $main-color-1;
+            width: 160px;
+            height: 100vh;
+            border-right: 2px solid $accent-color-1;
+            z-index: 20;
+          }
+        }
+      }
 
-&-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 1rem; 
-  }
-
-  &-open {
-    display: flex;
-    transform: translateX(0); 
-  }
-  &-close{
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
 }
 
+
 }
-}
+
+/* **** */ 
+
