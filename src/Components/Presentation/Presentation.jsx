@@ -21,9 +21,6 @@ export default function Presentation() {
                     </p>
                     <div className="presentation__content-left-bottom"><FontAwesomeIcon icon={faQuoteRight} className="presentation__content-left-bottom-icon"/></div>
                 </div>
-                <div className="presentation__content-right">
-
-                </div>
             </div>
         </article>
     )
