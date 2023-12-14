@@ -62,6 +62,12 @@
           cursor: pointer;
           &:hover{
           @include zoom-effect;
+          &-icon{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+          }
         }
         }
         &-content{
