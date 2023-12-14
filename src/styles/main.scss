@@ -9,8 +9,15 @@
 @import "../Components/Contact/Contact.scss";
 
 
-* {
+body {
     background-color: transparent;
     box-sizing: border-box;
-    max-width: 1800px;
+    max-width: 2000px;
+    min-width: 300px;
+    margin: auto;
+}
+
+* {
+    max-width: 2000px;
+    box-sizing: border-box;
 }
