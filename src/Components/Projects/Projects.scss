@@ -3,33 +3,33 @@
 .projects{
   font-size: 3rem;
   font-family: $font-family-1;
-  @media  (max-width: 600px) {
-  }
+  
   &__title {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
     position: relative;
     &-1{
-        width: 100%;
+        width: auto;
         display: flex;
         justify-content: center;
         font-size: 4rem;
         color: $title-color-1;
         font-family: $big-font;
-        padding: 250px 0 80px 0;
+        @media  (max-width: 600px) {
+          font-size: 2rem;
+        }
     }
     &-2{
         position: absolute;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
+        width: auto;
         height: 100%;
         color: $big-title-color-1;
         align-content: center;
         font-family: $title-font-1;
-        padding: 250px 0 80px 0;
 
     }
 }

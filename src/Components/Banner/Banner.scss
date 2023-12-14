@@ -1,10 +1,16 @@
 @import "../../styles/utilities.scss";
 
+.vanta-canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    top: 0 !important;
+
+}
 
 .home__banner-content {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +20,6 @@
     &-title{
         display: flex;
         width: 100%;
-        padding: 20px;
         &-h1{
             width: 100%;
             justify-content: flex-start;
@@ -31,7 +36,6 @@
         width: 100%;
         color: $main-color-2;
         font-size: 2rem;
-        padding: 20px;
         font-family: $font-family-2;
     }
     &-icon {
@@ -39,7 +43,7 @@
         font-size: 2em;
         position: absolute;
         bottom: 10px; 
-        width: 100%;
+        width: 100vw;
         align-items: center;
         color: $main-color-2;
         cursor: pointer;

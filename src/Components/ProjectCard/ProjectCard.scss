@@ -1,11 +1,18 @@
 @import "../../styles/utilities.scss";
 
 
+.project-flip-card{
+  width: 90%;
+}
+
 
 .container {
   display: flex;
   justify-content: center;
   margin: auto;
+  @media  (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 /****  FLIP CARD    ****/
@@ -19,6 +26,9 @@
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s;
+  @media  (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .flip-card.flipped {

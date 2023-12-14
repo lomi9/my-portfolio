@@ -5,7 +5,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         background-color: transparent;
         z-index: 10000;
         }
@@ -13,7 +13,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background-size: cover;
         background-position: center;
@@ -40,6 +40,7 @@
             @include style-top-border;
             position: fixed;
             z-index: 5;
+            width: 100vw;
         }
     
         &-trigger-element {
@@ -71,6 +72,7 @@
             @include style-top-border;
             position: fixed;
             z-index: 10000;
+            width: 100vw;
         }
         &-trigger-element {
             height: 1px;
@@ -83,9 +85,9 @@
         clip-path: polygon(0% 0%, 56% 0, 71% 48%, 56% 100%, 0% 100%);
         //clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
         padding-top: 200px;
-        padding-left: 10%;
         display: flex;
         justify-content: flex-start;
+        width: auto;
         &-border {
             height: 3px;
             background: $accent-color-1;
@@ -94,6 +96,7 @@
         }
         &-fixed-border{
             @include style-top-border;
+            width: 100vw;
         }
         &-trigger-element {
             height: 1px;
