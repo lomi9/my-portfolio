@@ -18,26 +18,30 @@ export default function ProjectCard ({ project }) {
     
     return (
         <>
-        <div className="project-flip-card">
-        <div className="container">
+        <div className="flip_container-1">
+        <div className="flip_container-2">
         <div className={`flip-card ${ isFlipped ? "flipped" : "" }`} >
         <div className='flip-card-inner'>
         <div className="card-border flip-card-front" >
-        <div className="card card-content">
+        <div className="card">
             <div className="card__description">
                 <div className="card__description-links">
+                    <div className="card__description-links-border">
                     <a target="_blank" rel="noopener noreferrer" href={project.github} className="card__description-links-btn icon-hover"><FontAwesomeIcon icon={faGithub} className='card__description-links-btn-icon'/></a>
                     <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn icon-hover"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>
+                    </div>
                 </div>
                 <div className="card__description-content">
                     <h3 className="card__description-content-title">{project.title}</h3>
                     <p className="card__description-content-text">{project.subtitle}</p>
-                    <div className="card__description-content-tags">
+                </div>
+                <div className="card__description-tags">
+                <div className="tag">
                     {project.tags.map(tag => (
-                        <span className="tag" key={tag}>{tag}</span>
+                        <span className="tag-item" key={tag}>{tag}</span>
                     ))}
                     </div>
-                </div>
+                    </div>
             </div>
             <div className="card__picture">
                 <div className="card__picture-container">
@@ -59,21 +63,27 @@ export default function ProjectCard ({ project }) {
                     <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn icon-hover"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>
                 </div>
                 <div className="card__description-content">
-                    <h3 className="card__description-content-titleback">{project.title}</h3>
-                    <p className="card__description-content-subtitleback">{project.subtitle}</p>
-                    <p className="card__description-content-description">{project.description}</p>
-                    <div className="card__description-content-tags">
+                    <h3 className="card__description-content-title">{project.title}</h3>
+                    <p className="card__description-content-text">{project.subtitle}</p>
+                </div>
+                <div className="card__description-tags">
+                    <div className="tag">
                     {project.tags.map(tag => (
-                        <span className="tag" key={tag}>{tag}</span>
+                        <span className="tag-item" key={tag}>{tag}</span>
                     ))}
                     </div>
-                </div>
+                    </div>
             </div>
-            <div className="card__picture-back">
+            <div className="card__back-right">
+                <div className="card__back-right-text">
+                        <p className="card__back-right-text-p">{project.description}</p>
+                </div>
+                        <div className="flip-button-div">
                         <button className="flip-button" onClick={handleFlip}>
                         <FontAwesomeIcon icon={faArrowRightLong} className="flip-button-back-icon"/>
                     </button>
-            </div>
+                    </div>
+                    </div>
         </div>
     </div>
     </div>

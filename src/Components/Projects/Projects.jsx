@@ -16,7 +16,7 @@ export default function Projects () {
             image: Booki,
             github: "https://github.com/lomi9/projet_2",
             live: "https://lomi9.github.io/projet_2",
-            description : "Description description description description description description description description description description"
+            description : "Construire, à parti d'une maquette fournis, le visuel d'un site de location de vacances avec HTML et CSS, en étant responsive."
 
         },
         {
