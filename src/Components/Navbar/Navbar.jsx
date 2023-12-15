@@ -63,7 +63,7 @@ export default function Navbar() {
 
             <div className={`navbar__mobile ${isMobileMenuOpen ? 'show' : ''}`} ref={navbarRef}>
             <button className="navbar__mobile-hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} className='navbar__hamburger-icon' />
+                <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} className='navbar__mobile-hamburger-icon' />
             </button>
                 <div className={`navbar__mobile-content ${isMobileMenuOpen ? 'show' : ''}`} ref={mobileMenuRef}>
                     {navLinks.map((link, index) => (
