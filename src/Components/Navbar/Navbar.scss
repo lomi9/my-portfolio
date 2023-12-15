@@ -47,6 +47,7 @@
     &__mobile {
         display: flex; 
         flex-direction: column;
+        padding-left: 20px;
         &-hamburger{
           background-color: $main-color-1;
           border: 2px solid $accent-color-1;
@@ -57,12 +58,12 @@
           font-size: 1.5rem;
           z-index: 21;
           cursor: pointer;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-content: center;
           &-icon{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: center;
+
         }
         &:hover{
           @include zoom-effect;
