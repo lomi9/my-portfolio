@@ -104,7 +104,7 @@
         &-fixed-border{
             @include style-top-border;
             position: fixed;
-            z-index: 10003;
+            z-index: 100000;
             width: 100vw;
         }
         &-trigger-element {
@@ -131,4 +131,10 @@
     height: 0;
     background-color: transparent;
     visibility: hidden;
+}
+
+.home__footer{
+        height: 150px;
+        background-color: $main-color-5;
+        width: 100%;
 }

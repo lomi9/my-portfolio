@@ -7,6 +7,7 @@ import Presentation from "../Components/Presentation/Presentation";
 import Projects from '../Components/Projects/Projects';
 import Contact from '../Components/Contact/Contact';
 import Tools from '../Components/Tools/Tools';
+import Footer from '../Components/Footer/Footer';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -80,15 +81,15 @@ export default function Home () {
                 </section>
                 <div className="home__presentation-trigger-element"></div>
                 <div className="home__contact-border" ref={contactBorderRef}></div>
+                <div className="home__project-trigger-element"></div>
                 </div>
                 <section className='home__contact' ref={contactRef} id="contact">
                     <Contact/>
                 </section>
                 <div className='home__footer'>
-                <p>Footer</p>
+                <Footer/>
                 </div>
             </div>
-            <div className="home__project-trigger-element"></div>
         </div>
 
     );
