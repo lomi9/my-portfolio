@@ -1,40 +1,40 @@
 @import "../../styles/utilities.scss";
 
-// Mixin pour les titres communs
+
 @mixin title-style {
     color: $main-color-3;
     font-family: $big-font;
-    font-size: 1.5rem;
-    padding-bottom: 20px;
+    font-size: 2.5rem;
+    padding-bottom: 60px;
 }
 
-// Mixin pour les arrière-plans des items
+
 @mixin item-background {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%; // Pour un cercle parfait, border-radius doit être 50%
+    height: 120px;
+    width: 120px;
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at 100px 100px, $main-color-2, $main-color-1,);
+    background: radial-gradient(circle at 150px 150px, $main-color-2, $main-color-1,);
 }
 
-// Mixin pour les noms des items
+
 @mixin item-name {
     color: $main-color-1;
     display: flex;
     justify-content: center;
-    padding-top: 7px;
+    padding-top: 20%;
     font-family: $font-family-2;
 }
 
 .tools{
     display: flex;
     flex-direction: column;
-    padding: $side-page-desktop-padding;
+    padding: 6%;
 
     &__technos, &__others {
-        padding-bottom: 50px;
+        padding-bottom: 150px;
 
         &-title {
             @include title-style;
@@ -45,12 +45,13 @@
             flex-wrap: wrap;
 
             &-item {
-                padding: 20px;
+                padding: 20px 3%;
                 &-background {
                     @include item-background;
                 }
                 &-name {
                     @include item-name;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -59,17 +60,26 @@
 
 .tools-icon {
     color: $main-color-2;
-    font-size: 3rem; // Vous pourriez vouloir utiliser 'rem' au lieu de 'px' pour une meilleure accessibilité
+    font-size: 5rem; 
     object-fit: contain;
 }
+
+
+// @media (min-width : $tab-breakpoint) and (max-width: px )
+
+
+
 
 @media (min-width : $mobile-breakpoint) and (max-width: $tab-breakpoint ) {
 
     .tools{
+        padding: $side-page-desktop-padding;
         &__technos, &__others {
+            padding-bottom: 50px;
     
             &-title {
                 font-size: 1.2rem;
+                padding-bottom: 20px;
             }
             &-content {
     
@@ -81,6 +91,7 @@
                     }
                     &-name {
                         font-size: 0.8rem;
+                        padding-top: 7px;
                     }
                 }
             }
@@ -96,10 +107,13 @@
 @media  (max-width: 530px ) {
 
     .tools{
+        padding: $side-page-desktop-padding;
         &__technos, &__others {
+            padding-bottom: 50px;
     
             &-title {
                 font-size: 1.1rem;
+                padding-bottom: 20px;
             }
             &-content {
     
@@ -111,6 +125,7 @@
                     }
                     &-name {
                         font-size: 0.6rem;
+                        padding-top: 7px;
                     }
                 }
             }

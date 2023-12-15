@@ -17,6 +17,9 @@ export default function Home () {
     const presentationBorderRef = useRef(null);
     const projectRef = useRef(null);
     const projectBorderRef = useRef(null);
+    const contactRef = useRef(null);
+    const contactBorderRef = useRef(null);
+    
 
     useEffect(() => {
 
@@ -40,7 +43,18 @@ export default function Home () {
                 toggleClass: { targets: projectBorderRef.current, className: "home__project-fixed-border" } 
             }
         });
+        gsap.to(contactBorderRef.current, {
+            scrollTrigger: {
+                trigger: contactRef.current,
+                start: "top top",
+                endTrigger: ".home__contact-trigger-element",
+                end: "bottom top",
+                scrub: true,
+                toggleClass: { targets: contactBorderRef.current, className: "home__contact-fixed-border" } 
+            }
+        });
     }, []);
+    
 
 
     return (
@@ -65,15 +79,16 @@ export default function Home () {
                     <Tools/>
                 </section>
                 <div className="home__presentation-trigger-element"></div>
-                <div className="home__project-trigger-element"></div>
+                <div className="home__contact-border" ref={contactBorderRef}></div>
                 </div>
-                <section className='home__contact' id="contact">
+                <section className='home__contact' ref={contactRef} id="contact">
                     <Contact/>
                 </section>
                 <div className='home__footer'>
                 <p>Footer</p>
                 </div>
             </div>
+            <div className="home__project-trigger-element"></div>
         </div>
 
     );
