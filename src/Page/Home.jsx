@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import Presentation from "../Components/Presentation/Presentation";
 import Projects from '../Components/Projects/Projects';
 import Contact from '../Components/Contact/Contact';
+import Tools from '../Components/Tools/Tools';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -61,10 +62,10 @@ export default function Home () {
                     <Projects/>
                 </section>
                 <section className='home__tools' id="tools">
-                    <p>Tools</p>
-                    <div className="home__project-trigger-element"></div>
+                    <Tools/>
                 </section>
                 <div className="home__presentation-trigger-element"></div>
+                <div className="home__project-trigger-element"></div>
                 </div>
                 <section className='home__contact' id="contact">
                     <Contact/>

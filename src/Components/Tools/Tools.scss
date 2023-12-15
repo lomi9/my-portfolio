@@ -1,0 +1,126 @@
+@import "../../styles/utilities.scss";
+
+// Mixin pour les titres communs
+@mixin title-style {
+    color: $main-color-3;
+    font-family: $big-font;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+// Mixin pour les arrière-plans des items
+@mixin item-background {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%; // Pour un cercle parfait, border-radius doit être 50%
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 100px 100px, $main-color-2, $main-color-1,);
+}
+
+// Mixin pour les noms des items
+@mixin item-name {
+    color: $main-color-1;
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+    font-family: $font-family-2;
+}
+
+.tools{
+    display: flex;
+    flex-direction: column;
+    padding: $side-page-desktop-padding;
+
+    &__technos, &__others {
+        padding-bottom: 50px;
+
+        &-title {
+            @include title-style;
+        }
+        &-content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            &-item {
+                padding: 20px;
+                &-background {
+                    @include item-background;
+                }
+                &-name {
+                    @include item-name;
+                }
+            }
+        }
+    }
+}
+
+.tools-icon {
+    color: $main-color-2;
+    font-size: 3rem; // Vous pourriez vouloir utiliser 'rem' au lieu de 'px' pour une meilleure accessibilité
+    object-fit: contain;
+}
+
+@media (min-width : $mobile-breakpoint) and (max-width: $tab-breakpoint ) {
+
+    .tools{
+        &__technos, &__others {
+    
+            &-title {
+                font-size: 1.2rem;
+            }
+            &-content {
+    
+                &-item {
+                    padding: 20px;
+                    &-background {
+                       width: 60px;
+                       height: 60px;
+                    }
+                    &-name {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    .tools-icon {
+        font-size: 2rem;  
+
+    }
+}
+
+@media  (max-width: 530px ) {
+
+    .tools{
+        &__technos, &__others {
+    
+            &-title {
+                font-size: 1.1rem;
+            }
+            &-content {
+    
+                &-item {
+                    padding: 15px;
+                    &-background {
+                       width: 55px;
+                       height: 55px;
+                    }
+                    &-name {
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    .tools-icon {
+        font-size: 1.8rem;  
+
+    }
+}
+
+

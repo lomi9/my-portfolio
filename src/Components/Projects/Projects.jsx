@@ -62,7 +62,7 @@ export default function Projects () {
         {
             title: "Mon Portfolio",
             subtitle: "Projet OpenClassrooms",
-            tags: ["React", "Sass", "Gsap"],
+            tags: ["React", "Sass"],
             image: Portfolio,
             github: "https://github.com/lomi9/portfolio",
             live: "lien_vers_version_live",

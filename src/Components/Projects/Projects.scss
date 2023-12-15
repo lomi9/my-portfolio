@@ -41,6 +41,8 @@
     row-gap: 100px;
     padding: $side-page-desktop-padding;
     padding-top: 50px;
+    padding-bottom: 100px;
+
 
     @media  (max-width: 1180px) { 
       display: flex;
