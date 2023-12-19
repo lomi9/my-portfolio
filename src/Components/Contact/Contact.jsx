@@ -49,7 +49,7 @@ export default function Contact() {
         {isModalVisible && (
                 <div className="modal">
                     <div className='modal__content'>
-                    <p className='modal__content-mesage'>{modalMessage}</p>
+                    <p className='modal__content-message'>{modalMessage}</p>
                     <button className='modal__content-btn' onClick={() => setIsModalVisible(false)}>Fermer</button>
                     </div>
                 </div>
