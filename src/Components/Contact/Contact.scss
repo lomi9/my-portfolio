@@ -222,6 +222,7 @@
     left: 30%; 
     transform: translate(-50%, -50%); 
     border-radius: 20px;
+    padding: 1px;
     @include card-border-color;
     &__content{
         width: 100%;
@@ -238,6 +239,7 @@
         font-size: 1rem;
         width: 100%;
         font-family: $font-family-1;
+        color: $main-color-4;
     }
     &-btn{
         font-family: $font-family-1;
