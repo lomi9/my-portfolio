@@ -52,7 +52,7 @@
 
 /**** FRONT CONTENT ****/
 .card { 
-  border-radius: 20px;
+  border-radius: 18px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -138,7 +138,7 @@
       object-fit: cover; 
       object-position: left; 
       border-top-left-radius: 30px;
-      border-bottom-right-radius: 10px;
+      border-bottom-right-radius: 20px;
     }
     &-overlay{
       display: flex;
@@ -152,7 +152,7 @@
       left: 0;
       background-color: rgba(0, 0, 0, 0.2); 
       border-top-left-radius: 30px;
-      border-bottom-right-radius: 10px;
+      border-bottom-right-radius: 20px;
     }
   }
 }
@@ -169,7 +169,7 @@
   flex-wrap: nowrap;
   gap: 20px;
   padding: 10px;
-
+  align-items: flex-end;
     }
 
 .tag-item{
@@ -181,7 +181,7 @@
     padding-bottom: 5px;
     color: $main-color-1;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -191,6 +191,10 @@
 
 /*** BACK CONTENT***/
 
+.flip-card-back{
+  @include card-back-border-color;
+}
+
 
 .card-content-back{
   justify-content: space-between;
@@ -199,12 +203,23 @@
 
 .card__description-content{
   &-titleback{
-    font-size: 1rem;
+    display: flex;
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 20px;
+    font-family: $font-family-1;
     color: $card-text-color-1;
+    width: 100%;
   }
-  &-subtitleback{
-    font-size: 1rem;
-    color: $card-text-color-1;
+  &-textback{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    font-family: $font-family-2;
+    color: $card-text-color-2;
+    width: 100%;
+    white-space: nowrap;
 
   }
   &-description{
@@ -222,10 +237,15 @@
     flex-wrap: wrap;
     align-content: center;
     padding-left: 5%;
+    display: flex;
+    align-content: flex-end;
 
     &-p{
-      font-size: 2rem;
-      color: $main-color-2;
+      font-size: 1.5rem;
+      color: $main-color-4;
+      padding: 5%;
+      text-align: left;
+      border-left: 2px solid $main-color-3;
   
     }
   
@@ -281,7 +301,7 @@
   background-color: white;
   border: none;
   border-top-left-radius: 20px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 18px;
   cursor: pointer;
   &-icon{
     font-size: 1.5rem;
@@ -306,10 +326,26 @@
 .tag-item{
     padding-left: 12px;
     padding-right: 12px;
-    padding-bottom: 4px;
-    font-size: 1rem;
+    padding-bottom: 2px;
+    font-size: 0.8rem;
+    height: 28px;
 }
 
+.card__back-right-text-p{
+      font-size: 1.3rem;
+
+}
+
+.card__description-content{
+  &-titleback{
+    font-size: 2.3rem;
+  }
+  &-textback{
+    font-size: 1.2rem;
+    width: 100%;
+
+  }
+}
 }
 
 @media  (min-width: 1330px) and (max-width: 1400px) {
@@ -330,15 +366,29 @@
   &-text{
     font-size: 1.2rem;
   }
+
+  &-titleback{
+    font-size: 2rem;
+  }
+  &-textback{
+    font-size: 1.2rem;
+
+  }
 }
 
 .card__back-right-text-p{
-      font-size: 1.5rem;
-  
+      font-size: 1.2rem;
     }
 
-
+.tag-item{
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  font-size: 0.8rem;
+  height: 28px;
 }
+}
+
 
 @media  (min-width: 1180px) and (max-width: 1330px) {
 
@@ -352,26 +402,34 @@
 }
 
 .card__description-content{
+  padding-bottom: 7px;
   &-title{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   &-text{
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  &-titleback{
+    font-size: 2rem;
+  }
+  &-textback{
+    font-size: 1rem;
+
   }
 }
 
 .card__back-right-text-p{
-      font-size: 1.5rem;
+      font-size: 1.2rem;
   
     }
     
     .tag-item{
 
-        height: 30px;
+        height: 25px;
         padding-left: 8px;
         padding-right: 8px;
         padding-bottom: 3px;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
 
@@ -393,6 +451,7 @@
   justify-content: space-between;
 
 &-content{
+  padding-bottom: 0;
   &-title{
     font-size: 3rem;
     padding-bottom: 5%;
@@ -406,16 +465,12 @@
   }
 }
 
-
-.tag-item{
-
-    height: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 5px;
-    font-size: 1.5rem;
+.tag{
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
-}}
+}
+}
 
 @media  (min-width: 660px) and (max-width: $tab-breakpoint) {
 
@@ -438,9 +493,24 @@
     font-size: 1.2rem; 
     padding-bottom: 0; 
   }
+  &-titleback{
+    font-size: 2rem;
+  }
+  &-textback{
+    font-size: 1rem;
+
+  }
+}
+}
+.card__back-right-text-p{
+  font-size: 1.4rem;
+
 }
 
-
+.tag{
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
 .tag-item{
 
     height: 30px;
@@ -449,7 +519,7 @@
     padding-bottom: 5px;
     font-size: 1rem;
 }
-}}
+}
 
 @media  (min-width: 480px) and (max-width: 660px) {
 
@@ -470,6 +540,13 @@
     font-size: 1rem; 
     padding-bottom: 0; 
   }
+  &-titleback{
+    font-size: 1.7rem;
+  }
+  &-textback{
+    font-size: 1rem;
+
+  }
 }
 
 
@@ -481,7 +558,7 @@
 }
 
 .tag-item{
-  height: 30px;
+  height: 25px;
   padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 5px;
@@ -504,6 +581,7 @@
 
 .card__description{
 &-content{
+  padding-bottom: 0;
   &-title{
     font-size: 1.5rem;
   }
@@ -511,12 +589,18 @@
     font-size: 0.8rem; 
     padding-bottom: 0; 
   }
+  &-titleback{
+    font-size: 1.2rem;
+  }
+  &-textback{
+    font-size: 0.8rem;
+
+  }
 }
 &-links{
   padding: 5px 0 0 5px;
 }
 }
-
 
 .tag {
   gap: 3px;

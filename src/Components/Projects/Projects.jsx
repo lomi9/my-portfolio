@@ -16,7 +16,7 @@ export default function Projects () {
             image: Booki,
             github: "https://github.com/lomi9/projet_2",
             live: "https://lomi9.github.io/projet_2",
-            description : "Construire, à parti d'une maquette fournis, le visuel d'un site de location de vacances avec HTML et CSS, en étant responsive."
+            description : "Création responsive d'un site web pour Booki, fidèle à la maquette FIGMA, en utilisant HTML et CSS pour une expérience utilisateur fluide sur tous les appareils."
 
         },
         {
@@ -26,7 +26,7 @@ export default function Projects () {
             image: SophieBluel,
             github: "https://github.com/lomi9/projet_3",
             live: "https://lomi9.github.io/projet_3",
-            description : "Description description description description description description description description description description"
+            description : "Développement d'un site web dynamique pour une architecte d'intérieur, intégrant une galerie de projets, une page d'authentification administrateur et une modale d'upload média avec JavaScript."
 
         },
         {
@@ -36,7 +36,7 @@ export default function Projects () {
             image: NinaCarducci,
             github: "https://github.com/lomi9/projet_5",
             live: "https://lomi9.github.io/projet_5",
-            description : "Description description description description description description description description description description"
+            description : "Optimisation et débogage d'un site de photographie pour accélérer le chargement, renforcer l'accessibilité et améliorer le référencement, grâce à une meilleure gestion des images et une restructuration du code."
 
         },
         {
@@ -46,7 +46,7 @@ export default function Projects () {
             image: Kasa,
             github: "https://github.com/lomi9/projet_6",
             live: "https://lomi9.github.io/projet_6/",
-            description : "Description description description description description description description description description description"
+            description : "Développement d'une application de location immobilière responsive avec React et Node.js. Utilisation de React Router et Sass."
 
         },
         {
@@ -56,7 +56,7 @@ export default function Projects () {
             image: MonVieuxGrimoire,
             github: "https://github.com/lomi9/projet_7",
             live: "lien_vers_version_live",
-            description : "Description description description description description description description description description description"
+            description : "Implémentation du back-end pour un site de notation de livres avec Node.js, Express et MongoDB, intégrant une API REST pour des opérations CRUD et une authentification sécurisées. Application des principes du Green code."
 
         },
         {
@@ -66,7 +66,7 @@ export default function Projects () {
             image: Portfolio,
             github: "https://github.com/lomi9/portfolio",
             live: "lien_vers_version_live",
-            description : "Description description description description description description description description description description"
+            description : "Création de mon portfolio personnel en utilisant React et SASS, présentant une interface utilisateur responsive, mettant en valeur mes projets et compétences en développement web."
 
         },
 
