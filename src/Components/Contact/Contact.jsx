@@ -48,8 +48,8 @@ export default function Contact() {
         </form>
         {isModalVisible && (
                 <div className="modal">
-                    <p>{modalMessage}</p>
-                    <button onClick={() => setIsModalVisible(false)}>Fermer</button>
+                    <p className='modal__mesage'>{modalMessage}</p>
+                    <button className='modal__btn' onClick={() => setIsModalVisible(false)}>Fermer</button>
                 </div>
             )}
         </div>

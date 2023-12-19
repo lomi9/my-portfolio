@@ -85,6 +85,7 @@ export default function Home () {
                 </div>
                 <section className='home__contact' ref={contactRef} id="contact">
                     <Contact/>
+                    <div className="home__contact-trigger-element"></div>
                 </section>
                 <div className='home__footer'>
                 <Footer/>
