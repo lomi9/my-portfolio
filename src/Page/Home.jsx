@@ -39,7 +39,7 @@ export default function Home () {
                 trigger: projectRef.current,
                 start: "top top",
                 endTrigger: ".home__project-trigger-element",
-                end: "bottom center",
+                end: "bottom top",
                 scrub: true,
                 toggleClass: { targets: projectBorderRef.current, className: "home__project-fixed-border" } 
             }
