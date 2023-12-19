@@ -1,6 +1,26 @@
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 
 export default function Contact() {
+    const [modalMessage, setModalMessage] = useState('');
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_55y0hni', 'template_tpkjx4e', e.target, 'pMI3LN0J9BfTnu2Mt')
+            .then((result) => {
+                setModalMessage('Votre message a été envoyé avec succès !');
+                setIsModalVisible(true);
+                e.target.reset();
+            }, (error) => {
+                setModalMessage("Une erreur s'est produite, veuillez réessayer.");
+                setIsModalVisible(true);
+            });
+    };
+
+
     return (
         <div className="contact">
 
@@ -9,7 +29,7 @@ export default function Contact() {
                 <p className='contact__title-2'>Contact</p>
         </div>
 
-        <form name="contact" method="POST" data-netlify="true" className="contact__form">
+        <form onSubmit={sendEmail} className="contact__form">
             <input type="hidden" name="form-name" value="contact" />
             
             <div className="contact__form-name">
@@ -26,6 +46,12 @@ export default function Contact() {
             </div>
             <button type="submit" className="contact__form-button">Envoyer</button>
         </form>
+        {isModalVisible && (
+                <div className="modal">
+                    <p>{modalMessage}</p>
+                    <button onClick={() => setIsModalVisible(false)}>Fermer</button>
+                </div>
+            )}
         </div>
     );
 }

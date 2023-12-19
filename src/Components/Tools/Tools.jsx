@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faJs, faNode, faReact } from "@fortawesome/free-brands-svg-icons";
 import { faFigma } from "@fortawesome/free-brands-svg-icons";
+import { faSass } from '@fortawesome/free-brands-svg-icons';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -17,6 +18,7 @@ export default function Tools () {
         { name: "JavaScript", icon: faJs },
         { name: "React", icon: faReact },
         { name: "NodeJS", icon: faNode },
+        { name: "Sass", icon: faSass },
     ];
 
     const others = [
