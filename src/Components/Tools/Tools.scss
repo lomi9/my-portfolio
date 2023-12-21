@@ -1,57 +1,43 @@
 @import "../../styles/utilities.scss";
 
 
-@mixin title-style {
-    color: $main-color-3;
-    font-family: $big-font;
-    font-size: 2.5rem;
-    padding-bottom: 60px;
-}
-
-
-@mixin item-background {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle at 170px 170px, rgb(15, 13, 13), white,);
-}
-
-
-@mixin item-name {
-    color: $main-color-1;
-    display: flex;
-    justify-content: center;
-    padding-top: 20%;
-    font-family: $font-family-2;
-}
-
 .tools{
     display: flex;
     flex-direction: column;
-    padding: 6%;
+    padding: 5vw 14vw;
 
-    &__technos, &__others {
-        padding-bottom: 150px;
+    &__technos {
 
         &-title {
-            @include title-style;
+            color: $main-color-4;
+            font-family: $font-family-5;
+            font-size: 2.5rem;
+            padding-bottom: 60px;
         }
         &-content {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: space-between;
 
             &-item {
-                padding: 20px 3%;
+                margin: 2%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
                 &-background {
-                    @include item-background;
+                    padding-bottom: 15px;
+                    display: flex;
+                    justify-content: center
                 }
                 &-name {
-                    @include item-name;
-                    font-size: 1.5rem;
+                    font-size: 0.8rem;
+                    color: $main-color-5;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: flex-end;
+                    justify-content: center;
+                    font-family: $font-family-4;
                 }
             }
         }
@@ -59,15 +45,10 @@
 }
 
 .tools-icon {
-    color: $main-color-2;
-    font-size: 5rem; 
-    object-fit: contain;
+    color: $main-color-5;
+    font-size: 2.5rem; 
+
 }
-
-
-// @media (min-width : $tab-breakpoint) and (max-width: px )
-
-
 
 
 @media (min-width : $mobile-breakpoint) and (max-width: $tab-breakpoint ) {
@@ -84,10 +65,8 @@
             &-content {
     
                 &-item {
-                    padding: 20px;
                     &-background {
-                       width: 60px;
-                       height: 60px;
+
                     }
                     &-name {
                         font-size: 0.8rem;
@@ -97,45 +76,10 @@
             }
         }
     }
-    
-    .tools-icon {
-        font-size: 2rem;  
 
-    }
 }
 
-@media  (max-width: 530px ) {
 
-    .tools{
-        padding: $side-page-desktop-padding;
-        &__technos, &__others {
-            padding-bottom: 50px;
-    
-            &-title {
-                font-size: 1.1rem;
-                padding-bottom: 20px;
-            }
-            &-content {
-    
-                &-item {
-                    padding: 15px;
-                    &-background {
-                       width: 55px;
-                       height: 55px;
-                    }
-                    &-name {
-                        font-size: 0.6rem;
-                        padding-top: 7px;
-                    }
-                }
-            }
-        }
-    }
-    
-    .tools-icon {
-        font-size: 1.8rem;  
 
-    }
-}
 
 

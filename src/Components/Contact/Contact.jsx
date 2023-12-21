@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import gsap from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import emailjs from 'emailjs-com';
+
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
 
 export default function Contact() {
+
     const [modalMessage, setModalMessage] = useState('');
     const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -20,13 +26,29 @@ export default function Contact() {
             });
     };
 
+    useEffect(() => {
+        gsap.to('.contact__title-2', {
+            scrollTrigger: {
+                trigger: '.contact__title-2',
+                start: 'top bottom', 
+                toggleActions: 'play none none none',
+            },
+            duration: 2,
+            text: {
+                value: ".CONTACT.",
+                delimiter: ""
+            },
+            ease: "none"
+        });
+
+    }, []);
+
 
     return (
         <div className="contact">
 
         <div className='contact__title'>
-        <h2 className='contact__title-1'>ÉCRIVEZ-MOI</h2>
-                <p className='contact__title-2'>Contact</p>
+                <h2 className='contact__title-2'>Contact</h2>
         </div>
 
         <form onSubmit={sendEmail} className="contact__form">
