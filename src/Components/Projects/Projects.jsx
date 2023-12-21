@@ -1,3 +1,7 @@
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Booki from "../../assets/booki.png";
 import SophieBluel from "../../assets/sophie-bluel.png";
@@ -5,6 +9,9 @@ import NinaCarducci from "../../assets/nina-carducci.png";
 import Kasa from "../../assets/kasa.png";
 import MonVieuxGrimoire from "../../assets/mon-vieux-grimoire.png";
 import Portfolio from "../../assets/portfolio.png";
+
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
+
 
 export default function Projects () {
 
@@ -72,10 +79,27 @@ export default function Projects () {
 
     ];
 
+    useEffect(() => {
+        gsap.to('.projects__title-1', {
+            scrollTrigger: {
+                trigger: '.projects__title-1',
+                start: 'top bottom', 
+                toggleActions: 'play none none none',
+            },
+            duration: 2,
+            text: {
+                value: ".MES PROJETS.",
+                delimiter: ""
+            },
+            ease: "none"
+        });
+
+    }, []);
+
     return (
         <div className="projects">
         <div className='projects__title'>
-            <h2 className='projects__title-1'>.MES PROJETS.</h2>
+            <h2 className='projects__title-1'>.</h2>
         </div>
         <div className="projects-grid">
             {projects.map(project => <ProjectCard project={project} key={project.title} />)}

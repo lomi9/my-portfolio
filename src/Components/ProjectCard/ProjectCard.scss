@@ -9,8 +9,9 @@
 }
 
 .flip_container-2{
-
-
+  &:hover{
+    @include zoom-effect;
+  }
 }
 
 /****  FLIP  ****/
