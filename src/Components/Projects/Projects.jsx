@@ -75,8 +75,7 @@ export default function Projects () {
     return (
         <div className="projects">
         <div className='projects__title'>
-        <h2 className='projects__title-1'>TRAVAUX</h2>
-                <p className='projects__title-2'>Mes projets</p>
+            <h2 className='projects__title-1'>.MES PROJETS.</h2>
         </div>
         <div className="projects-grid">
             {projects.map(project => <ProjectCard project={project} key={project.title} />)}

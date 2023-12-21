@@ -40,10 +40,10 @@ $side-page-desktop-padding : 0 3%;
 
 // CARDS
 
-$card-width : 700px;
-$card-height : 400px;
+$card-width : 30vw;
+$card-height : 17vw;
 
-$card-text-color-1 : #671320;
+$card-text-color-1 : #250902;
 $card-text-color-2 : #623030;
 $card-text-color-3 : #FE5F55;
 
@@ -61,7 +61,14 @@ $card-text-color-3 : #FE5F55;
 
 @mixin card-border-color{
     background-color: #cfb68c;
-    background-image: linear-gradient(43deg, #cfb68c 8%, #ef35e3 35%, #fbfaf8 71%, #f98515 98%);
+    background-image: linear-gradient(27deg, #cfb68c 19%, #fe5f55 44%, #ffffff 65%, #fe5f55 100%);
+       
+
+   // background-color:#cfb68c;
+    //background-image: linear-gradient(0deg, #cfb68c 2%, #dcc5b3 56%, #fbf9f6 100%);
+
+   // background-color: #cfb68c;
+   // background-image: linear-gradient(43deg, #cfb68c 8%, #ef35e3 35%, #fbfaf8 71%, #f98515 98%);
     
 }
 
@@ -72,8 +79,8 @@ $card-text-color-3 : #FE5F55;
 }
 
 @mixin card-background{
-  //  background-color: #250902;
-  //  background-image: linear-gradient(43deg, #250902 19%, #867384 53%, #331e12 86%);
+  //background-color: #250902;
+  //background-image: linear-gradient(43deg, #250902 19%, #867384 53%, #331e12 86%);
   background-color: #cfb68c;
   background-image: linear-gradient(59deg, #cfb68c 0%, #ede4d4 41%, #ffffff 49%, #ede4d4 62%, #f3ede2 85%);
   

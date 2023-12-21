@@ -3,84 +3,47 @@
 .projects{
   font-size: 3rem;
   font-family: $font-family-1;
+  padding: 14vw 12vw;
   
   &__title {
-    width: auto;
     display: flex;
     justify-content: center;
-    position: relative;
     &-1{
-        width: auto;
         display: flex;
         justify-content: center;
-        font-size: 5rem;
-        color: $title-color-1;
-        font-family: $big-font;
-        padding: 100px 0 50px 0;
-    }
-    &-2{
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: auto;
-        height: 100%;
-        color: $big-title-color-1;
-        align-content: center;
-        font-family: $title-font-1;
-        padding: 100px 0 50px 0;
-
+        font-size: 4rem;
+        color: $main-color-3;
+        font-family: $font-family-4;
+        padding-bottom: 8vw;
     }
 }
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 0; 
-    row-gap: 100px;
-    padding: $side-page-desktop-padding;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
 
-
-    @media  (max-width: 1180px) { 
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center;
-    }
-    @media  (max-width: 965px) { 
-      padding-right: 50px;
-      padding-left: 50px;
+    > * {
+        flex: 1 1 calc(50% - 10px);
+        margin-bottom: 7vw;
     }
   }
 
+  @media (max-width : 790px ) {
 
-  @media (max-width: $tab-breakpoint ) {
-
-    .projects {
-        justify-content: flex-start;
-        &__title-1{
-            font-size: 2.5rem;
-        }
-        &__title-2{
-            font-size: 2rem;
-        }
+    .projects__title-1{
+        font-size: 2.2rem;
+        padding-bottom: 14vw;
     }
-}
-
-@media (max-width: $mobile-breakpoint ) {
-
-    .projects {
-        justify-content: flex-start;
-        &__title-1{
-            font-size: 1.5rem;
+    .projects-grid {
+        > * {
+            flex: 1 calc(100%);
         }
-        &__title-2{
-            font-size: 1.3rem;
-        }
-    }
-}
+      }
+  }
+
+
+
   

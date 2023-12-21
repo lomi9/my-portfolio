@@ -29,7 +29,7 @@
     &__presentation {
         //background-color: $main-color-1;
         background-color: #f3ede2;
-        background-image: linear-gradient(68deg, #f3ede2 5%, #ede4d4 89%);             
+        background-image: linear-gradient(68deg, #f3ede2 5%, #ede4d4 89%);          
         &-border {
             height: $top-color-border-height;
             background: $accent-color-1; 
@@ -45,7 +45,8 @@
     
     }
     &__project{
-        background-color:$main-color-5; 
+        min-width: 300px;
+        background-color:$main-color-2; 
         @media  (max-width: 1320px) {
 
          }
@@ -57,7 +58,7 @@
         }
         &-border {
             height: $top-color-border-height;
-            background: $accent-color-2;
+            background: $title-color-1;
             width: 100%;
             z-index: 0;
         }
