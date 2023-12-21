@@ -48,14 +48,16 @@
         &-input {
             border-style: none;
             background-color: transparent;
-            font-size: 2rem;
+            font-size: 1.5rem;
             width: 800px;
             border-bottom: 2px solid $accent-color-1;
+            font-family: $font-family-2;
             &:focus{
+                font-size: 1.5rem;
                 outline: none;
                 font-family: $font-family-2;
                 color: $main-color-5;
-                background-color: transparent;
+                background-color: none;
             }
         }
     }
@@ -73,14 +75,16 @@
         &-input{
             border-style: none;
             background-color: transparent;
-            font-size: 2rem;
+            font-size: 1.5rem;
             border-bottom: 2px solid $accent-color-1;
             width: 800px;
+            font-family: $font-family-2;
             &:focus{
                 outline: none;
+                font-size: 1.5rem;
                 font-family: $font-family-2;
                 color: $main-color-5;
-                background-color: transparent;
+                background-color: none;
             }
 
         }
@@ -98,15 +102,20 @@
         &-input{
             border-style: none;
             background-color: transparent;
-            font-size: 2rem;
+            font-size: 1.5rem;
             border-bottom: 2px solid $accent-color-1;
             height: 150px;
             width: 800px;
+            font-family: $font-family-2;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
             &:focus{
                 outline: none;
+                font-size: 1.5rem;
                 font-family: $font-family-2;
                 color: $main-color-5;
-                background-color: transparent;
+                background-color: none;
             }
 
         }
