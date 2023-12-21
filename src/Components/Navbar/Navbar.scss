@@ -23,6 +23,7 @@
         height: 50px;
         border-radius: 50px;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+
         &-content{
             display: flex;
             justify-content: space-between;
@@ -32,8 +33,28 @@
 }
 
 
+@media (min-width: $large-screen-breakpoint) {
 
-@media (max-width: 768px) {
+  .navbar {
+    padding-top: 2rem;
+
+    &__desktop{
+        border: 1px $navbar-border-color solid;
+        z-index: 2;
+        width: 800px;
+        height: 80px;
+
+        &-content{
+            width: 90%;
+        }
+    }
+}
+
+
+}
+
+
+@media (max-width: $tab-breakpoint) {
 
   .navbar {
     justify-content: flex-start;
@@ -89,9 +110,6 @@
       }
 
 }
-
-
 }
 
-/* **** */ 
 

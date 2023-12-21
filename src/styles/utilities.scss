@@ -1,12 +1,16 @@
 // Media Queries
 $tab-breakpoint : 768px;
 $mobile-breakpoint : 480px;
+$large-screen-breakpoint : 2000px;
 
 
 // Fonts
 $title-font-1 : 'EB Garamond', serif;
-$font-family-1 : 'Darker Grotesque', sans-serif;
+$font-family-1 : 'Exo 2', sans-serif;
 $font-family-2 : 'Poiret One', sans-serif;
+$font-family-3 :'Darker Grotesque', sans-serif; 
+$font-family-4 : 'Roboto Mono', monospace;
+$font-family-5 : 'Rubik', sans-serif;
 
 $big-font : 'Rammetto One', sans-serif;
 
@@ -47,7 +51,7 @@ $card-text-color-3 : #FE5F55;
 
 @mixin navbar-link {
     text-decoration: none;
-    cursor: pointer;font-family: 'Poiret One', sans-serif;
+    cursor: pointer;
     font-size: 1.5rem;
 }
 

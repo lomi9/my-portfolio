@@ -118,23 +118,24 @@
 
         }
     }
-
-    &-button{
-        margin-top: 50px;
+    &-submit{
         display: flex;
-        flex-wrap: wrap;
-        align-content: center;
         justify-content: center;
-        align-items: center;
+        margin-top: 50px;
+
+    &-btn{
+        display: flex;
         background-color: $accent-color-1;
-        font-family: $font-family-1;
-        border: none;
-        font-size: 3rem;
         border-radius: 50px;
         color: $main-color-1;
-        font-weight: 600;
-        width: 40%;
+        padding: 10px 50px;
+        border: none;
+        //font-family: $font-family-1;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 400;
     }
+}
 }
 
 

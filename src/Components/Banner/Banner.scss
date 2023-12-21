@@ -5,10 +5,10 @@
     height: 100vh !important;
     top: 0 !important;
     min-width: 300px;
-    max-width: 2000px;
     margin: auto;
-
 }
+
+
 
 .home__banner-content {
     position: relative;
@@ -26,7 +26,6 @@
         padding: $side-page-desktop-padding;
         &-h1{
             width: 100%;
-            justify-content: flex-start;
             font-family: $title-font-1;
             color: $main-color-2;
             font-size: 4rem;
@@ -55,35 +54,37 @@
     }
 }
 
-@media (max-width: 768px ) {
+@media (min-width: $large-screen-breakpoint ) {
     .home__banner-content {
         &-title{
             &-h1{
-                font-size: 3rem;
+                font-size: 3vw;
             }
         }
         &-text{
-            font-size: 1.5rem;
+            padding-top: 1%;
+            font-size: 1.3vw;
         }
- 
     }
 }
+
+
     
-    @media (max-width: 768px ) {
-        .home__banner-content {
-            &-title{
-                &-h1{
-                    font-size: 2.5rem;
-                }
+@media (min-width: $mobile-breakpoint ) and (max-width: $tab-breakpoint ) {
+    .home__banner-content {
+        &-title{
+            &-h1{
+                font-size: 2.5rem;
             }
-            &-text{
-                font-size: 1rem;
-                padding-top: 0;
+        }
+        &-text{
+            font-size: 1rem;
+            padding-top: 0;
             }
         }
 }
 
-@media (max-width: 440px ) {
+@media (max-width: $mobile-breakpoint ) {
     .home__banner-content {
         &-title{
             &-h1{

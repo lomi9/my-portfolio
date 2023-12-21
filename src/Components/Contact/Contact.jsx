@@ -44,7 +44,9 @@ export default function Contact() {
                 <label htmlFor="message" className="contact__form-message-label">Message</label>
                 <textarea id="message" name="message" className="contact__form-message-input"></textarea>
             </div>
-            <button type="submit" className="contact__form-button">Envoyer</button>
+            <div className='contact__form-submit'>
+                <button type="submit" className="contact__form-submit-btn">Envoyer</button>
+            </div>
         </form>
         {isModalVisible && (
             <div className='modal-filter'>

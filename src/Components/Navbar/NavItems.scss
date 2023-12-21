@@ -6,8 +6,9 @@
   
   .navbar__menu-items {
     @include navbar-link;
-    color: $main-color-2;
-    font-weight: 600;
+    color: $main-color-4;
+    font-weight: 100;
+    font-family: $font-family-5;
 
   }
   
@@ -26,15 +27,27 @@
   }
 
 
-  @media (max-width: 768px) {
+  @media (min-width: $large-screen-breakpoint) {
+  
+  .navbar__menu-items {
+    font-size: 3rem;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    translate: -1.3em -50%;
+  }
+
+  }
+
+
+  @media (max-width: $tab-breakpoint) {
 
     .navbar__menu-item-wrapper {
       padding-bottom: 20px;
     }
     
-    .navbar__menu-items {
-    }
-
     .circle {
       position: absolute;
       top: 30%;
