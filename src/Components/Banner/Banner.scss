@@ -24,6 +24,7 @@
         display: flex;
         width: 100%;
         padding: $side-page-desktop-padding;
+        padding-bottom: 1%;
         &-h1{
             width: 100%;
             font-family: $title-font-1;
@@ -70,7 +71,7 @@
 
 
     
-@media (min-width: $mobile-breakpoint ) and (max-width: $tab-breakpoint ) {
+@media (min-width: $mobile-breakpoint ) and (max-width: 900px ) {
     .home__banner-content {
         &-title{
             &-h1{

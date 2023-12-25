@@ -4,7 +4,7 @@
 .tools{
     display: flex;
     flex-direction: column;
-    padding: 5vw 14vw;
+    padding: 5vw 6vw;
 
     &__technos {
 
@@ -31,7 +31,7 @@
                     justify-content: center
                 }
                 &-name {
-                    font-size: 0.8rem;
+                    font-size: 1.3vw;
                     color: $main-color-5;
                     display: flex;
                     flex-wrap: wrap;
@@ -46,8 +46,17 @@
 
 .tools-icon {
     color: $main-color-5;
-    font-size: 2.5rem; 
+    font-size: 6vw;
 
+}
+
+@media (min-width : $large-screen-breakpoint) {
+   .tools-icon{
+    font-size: 6vw;
+   }
+   .tools__technos-content-item-name{
+    font-size: 1.3vw;
+   }
 }
 
 

@@ -41,6 +41,7 @@
             position: fixed;
             z-index: 5;
             width: 100vw;
+            min-width: 300px;
         }
     
     }
@@ -67,6 +68,7 @@
             position: fixed;
             z-index: 10000;
             width: 100vw;
+            min-width: 300px;
         }
 
         
@@ -105,6 +107,7 @@
             position: fixed;
             z-index: 100000;
             width: 100vw;
+            min-width: 300px;
         }
         &-trigger-element {
             height: 1px;

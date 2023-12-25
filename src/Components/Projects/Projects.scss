@@ -44,6 +44,27 @@
       }
   }
 
+  @media (min-width : $large-screen-breakpoint) {
+
+    .projects__title-1{
+        font-size: 3vw;
+    }
+  }
+
+  @media (min-width : $mobile-breakpoint) and (max-width : 900px ) {
+
+    .projects__title-1{
+        font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width : $mobile-breakpoint) {
+
+    .projects__title-1{
+        font-size: 1.8rem;
+    }
+  }
+
 
 
   
