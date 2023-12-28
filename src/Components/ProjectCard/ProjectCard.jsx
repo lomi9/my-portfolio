@@ -28,7 +28,7 @@ export default function ProjectCard ({ project }) {
                 <div className="card__description-links">
                     <div className="card__description-links-border">
                     <a target="_blank" rel="noopener noreferrer" href={project.github} className="card__description-links-btn"><FontAwesomeIcon icon={faGithub} className='card__description-links-btn-icon'/></a>
-                    <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>
+                    <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn live-icon"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>
                     </div>
                 </div>
                 <div className="card__description-content">
@@ -59,7 +59,7 @@ export default function ProjectCard ({ project }) {
             <div className="card__description">
                 <div className="card__description-links">
                     <a target="_blank" rel="noopener noreferrer" href={project.github} className="card__description-links-btn icon-hover"><FontAwesomeIcon icon={faGithub} className='card__description-links-btn-icon'/></a>
-                    <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn icon-hover"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>
+                    <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn icon-hover live-icon"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>
                 </div>
                 <div className="card__description-content">
                     <h3 className="card__description-content-titleback">{project.title}</h3>
