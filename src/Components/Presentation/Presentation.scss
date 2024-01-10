@@ -8,10 +8,14 @@
     
     &__picture{
         width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
 
         &-img{
             width:80%;
             border-radius: 5px;
+            object-fit: cover;
 
         }
     }
@@ -34,10 +38,13 @@
             }
             &-text{
                 font-family: $font-family-5;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 line-height: 1.4rem;
                 text-align: justify;
                 color: $main-color-2;
+                &-p{
+                    padding: 2% 0;
+                }
             }
         }
     }
@@ -94,6 +101,7 @@
             &-text{
         font-size: 0.6rem;
         line-height: 1rem ;
+                
     }
     }
 }
