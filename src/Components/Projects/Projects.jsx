@@ -10,6 +10,7 @@ import Kasa from "../../assets/kasa.png";
 import MonVieuxGrimoire from "../../assets/mon-vieux-grimoire.png";
 import Portfolio from "../../assets/portfolio.png";
 import casaMarerio from "../../assets/casa-marerio.webp";
+import halimaGarden from "../../assets/halima-garden.webp";
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
@@ -60,7 +61,7 @@ export default function Projects () {
         {
             category : "academic",
             title: "Mon vieux grimoire",
-            tags: ["NODE.JS", "ExpressJS", "API REST"],
+            tags: ["NODE.JS", "ExpressJS", "API REST", "MongoDB"],
             image: MonVieuxGrimoire,
             github: "https://github.com/lomi9/projet_7",
             live: "",
@@ -84,17 +85,17 @@ export default function Projects () {
             image: casaMarerio,
             github: "https://github.com/lomi9/casa-marerio",
             live: "https://casa-marerio.com",
-            description : "Création de la page de présentation et de réservation pour la location d'un logement de vacances, en utilisant React, sass et i18n pour les différentes langues."
+            description : "Création de la page de présentation et de réservation pour la location d'un logement de vacances, en utilisant React, sass et i18n pour les différentes langues. Le site est responsive."
 
         },
         {
             category : "personal",
             title: "Halima Garden (en cours)",
             tags: ["REACT", "SASS"],
-            image: "Coming soon",
-            github: "",
+            image: halimaGarden,
+            github: "https://github.com/lomi9/halima-garden",
             live: "",
-            description : "à venir : site de vente d'huiles marrocaines (huiles alimentaires et de beauté)."
+            description : "Application de vente d'huiles marrocaines (huiles alimentaires et de beauté) avec une page de connexion utilisateur et une modale administrateur d'ajout de produits."
 
         },
 
