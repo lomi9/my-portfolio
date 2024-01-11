@@ -37,7 +37,7 @@ export default function Tools () {
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: technosRef.current,
-                    start: "top center+=100", 
+                    start: "top center", 
                     toggleActions: "play none none none",
                     once: true 
                 }

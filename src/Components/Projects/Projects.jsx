@@ -107,6 +107,7 @@ export default function Projects () {
 
     const handleFilterChange = (newFilter) => {
         setFilter(newFilter);
+        setTimeout(() => ScrollTrigger.refresh(), 150);
     };
 
 

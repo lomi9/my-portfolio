@@ -30,7 +30,7 @@ export default function Contact() {
         gsap.to('.contact__title-2', {
             scrollTrigger: {
                 trigger: '.contact__title-2',
-                start: 'top bottom', 
+                start: 'top center', 
                 toggleActions: 'play none none none',
             },
             duration: 2,
@@ -48,7 +48,7 @@ export default function Contact() {
         <div className="contact">
 
         <div className='contact__title'>
-                <h2 className='contact__title-2'>.</h2>
+                <h2 className='contact__title-2'></h2>
         </div>
 
         <form onSubmit={sendEmail} className="contact__form">
