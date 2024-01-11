@@ -16,14 +16,15 @@ $big-font : 'Rammetto One', sans-serif;
 
 // Colors
 $main-color-1 : #F3EDE2;
-$main-color-2 : #250902;
+$main-color-2 : #1F0A12;
+//$main-color-2 : #250902;
 $main-color-3 : #EDDAD4;
 $main-color-4 : #623030;
 $main-color-5 : #2E0F1B;
 
 //$accent-color-1 : #FF6D33;
 $accent-color-1 : #FE5F55;
-$accent-color-2 : #DEED5B;
+$accent-color-2 : #F1F467;
 $accent-color-3 : #A9106E;
 
 $navbar-background-color : #F5F5F5;
@@ -43,9 +44,13 @@ $side-page-desktop-padding : 0 3%;
 $card-width : 30vw;
 $card-height : 17vw;
 
-$card-text-color-1 : #250902;
-$card-text-color-2 : #623030;
+$card-text-color-1 : #F3EDE2;
+$card-text-color-2 : #F3EDE2;
 $card-text-color-3 : #FE5F55;
+
+$links-color : #1A0E0F;
+$tags-color : #EDDAD4;
+$tags-text-color: #1F0A12;
 
 
 
@@ -60,16 +65,9 @@ $card-text-color-3 : #FE5F55;
 }
 
 @mixin card-border-color{
-    background-color: #cfb68c;
-    background-image: linear-gradient(27deg, #cfb68c 19%, #fe5f55 44%, #ffffff 65%, #fe5f55 100%);
-       
-
-   // background-color:#cfb68c;
-    //background-image: linear-gradient(0deg, #cfb68c 2%, #dcc5b3 56%, #fbf9f6 100%);
-
-   // background-color: #cfb68c;
-   // background-image: linear-gradient(43deg, #cfb68c 8%, #ef35e3 35%, #fbfaf8 71%, #f98515 98%);
-    
+//background-color: #cfb68c;
+//background-image: linear-gradient(27deg, #cfb68c 19%, #fe5f55 44%, #ffffff 65%, #fe5f55 100%);
+background-color: #C9AEB9;
 }
 
 @mixin card-back-border-color {
@@ -79,11 +77,9 @@ $card-text-color-3 : #FE5F55;
 }
 
 @mixin card-background{
-  //background-color: #250902;
-  //background-image: linear-gradient(43deg, #250902 19%, #867384 53%, #331e12 86%);
-  background-color: #cfb68c;
-  background-image: linear-gradient(59deg, #cfb68c 0%, #ede4d4 41%, #ffffff 49%, #ede4d4 62%, #f3ede2 85%);
-  
+    background-color: #3e1424;
+    background-image: linear-gradient(45deg, #3e1424 32%, #5c1e36 50%, #3e1424 78%);
+    
 }
 
 @mixin zoom-effect {

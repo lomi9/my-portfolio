@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,6 +9,7 @@ import NinaCarducci from "../../assets/nina-carducci.png";
 import Kasa from "../../assets/kasa.png";
 import MonVieuxGrimoire from "../../assets/mon-vieux-grimoire.png";
 import Portfolio from "../../assets/portfolio.png";
+import casaMarerio from "../../assets/casa-marerio.webp";
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
@@ -17,8 +18,8 @@ export default function Projects () {
 
     const projects = [
         {
+            category : "academic",
             title: "Booki",
-            subtitle: "Projet OpenClassrooms",
             tags: ["HTML", "CSS"],
             image: Booki,
             github: "https://github.com/lomi9/projet_2",
@@ -27,9 +28,9 @@ export default function Projects () {
 
         },
         {
+            category : "academic",
             title: "Sophie Bluel - Architecte",
-            subtitle: "Projet OpenClassrooms",
-            tags: ["HTML", "CSS", "JavaScript"],
+            tags: ["HTML", "CSS", "JS"],
             image: SophieBluel,
             github: "https://github.com/lomi9/projet_3",
             live: "https://lomi9.github.io/projet_3",
@@ -37,9 +38,9 @@ export default function Projects () {
 
         },
         {
+            category : "academic",
             title: "Nina Carducci - Photographe",
-            subtitle: "Projet OpenClassrooms",
-            tags: ["HTML", "CSS", "JavaScript"],
+            tags: ["HTML", "CSS", "JS"],
             image: NinaCarducci,
             github: "https://github.com/lomi9/projet_5",
             live: "https://lomi9.github.io/projet_5",
@@ -47,9 +48,9 @@ export default function Projects () {
 
         },
         {
+            category : "academic",
             title: "Kasa",
-            subtitle: "Projet OpenClassrooms",
-            tags: ["REACT", "SASS"],
+            tags: ["REACT", "SASS", "NODE.JS"],
             image: Kasa,
             github: "https://github.com/lomi9/projet_6",
             live: "https://lomi9.github.io/projet_6/",
@@ -57,27 +58,56 @@ export default function Projects () {
 
         },
         {
+            category : "academic",
             title: "Mon vieux grimoire",
-            subtitle: "Projet OpenClassrooms",
-            tags: ["Node.JS", "ExpressJS"],
+            tags: ["NODE.JS", "ExpressJS", "API REST"],
             image: MonVieuxGrimoire,
             github: "https://github.com/lomi9/projet_7",
-            live: "lien_vers_version_live",
+            live: "",
             description : "Implémentation du back-end pour un site de notation de livres avec Node.js, Express et MongoDB, intégrant une API REST pour des opérations CRUD et une authentification sécurisées. Application des principes du Green code."
 
         },
         {
+            category : "academic",
             title: "Mon Portfolio",
-            subtitle: "Projet OpenClassrooms",
-            tags: ["React", "Sass"],
+            tags: ["REACT", "SASS", "GSAP"],
             image: Portfolio,
             github: "https://github.com/lomi9/portfolio",
             live: "lien_vers_version_live",
             description : "Création de mon portfolio personnel en utilisant React et SASS, présentant une interface utilisateur responsive, mettant en valeur mes projets et compétences en développement web."
 
         },
+        {
+            category : "personal",
+            title: "Casa Marerio",
+            tags: ["REACT", "SASS", "i18n"],
+            image: casaMarerio,
+            github: "https://github.com/lomi9/casa-marerio",
+            live: "https://casa-marerio.com",
+            description : "Création de la page de présentation et de réservation pour la location d'un logement de vacances, en utilisant React, sass et i18n pour les différentes langues."
+
+        },
+        {
+            category : "personal",
+            title: "Halima Garden (en cours)",
+            tags: ["REACT", "SASS"],
+            image: "Coming soon",
+            github: "",
+            live: "",
+            description : "à venir : site de vente d'huiles marrocaines (huiles alimentaires et de beauté)."
+
+        },
 
     ];
+
+    const [filter, setFilter] = useState('academic');
+
+    const filteredProjects = projects.filter(project => project.category === filter);
+
+    const handleFilterChange = (newFilter) => {
+        setFilter(newFilter);
+    };
+
 
     useEffect(() => {
         gsap.to('.projects__title-1', {
@@ -96,13 +126,24 @@ export default function Projects () {
 
     }, []);
 
+
     return (
         <div className="projects">
         <div className='projects__title'>
             <h2 className='projects__title-1'>.</h2>
         </div>
+        <div className="projects__filter">
+            <div className='projects__filter-div'>
+            <div className='projects__filter-div-btn'>
+                <button className={filter === 'academic' ? 'active' : ''} onClick={() => handleFilterChange('academic')}>Études</button>
+                <span className='projects__filter-div-btn-span'>|</span>
+                <button className={filter === 'personal' ? 'active' : ''} onClick={() => handleFilterChange('personal')}>Personnels</button>
+                <div className={`filter-indicator ${filter}`}></div>
+            </div>
+            </div>
+            </div>
         <div className="projects-grid">
-            {projects.map(project => <ProjectCard project={project} key={project.title} />)}
+            {filteredProjects.map(project => <ProjectCard project={project} key={project.title} />)}
         </div>
         </div>
     )

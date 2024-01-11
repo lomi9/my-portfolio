@@ -31,17 +31,86 @@
     }
   }
 
+
+  .projects__filter {
+    position: relative;
+    display: flex;
+    padding-bottom: 7%;
+    display: flex;
+    justify-content: center;
+
+    &-div{
+
+      &-btn{
+        position: relative;
+        display: flex;
+        background-color: $main-color-1;
+        padding: 2px 20px;
+        border-radius: 30px;
+        &-span{
+          font-family: $font-family-5;
+      font-size: 1rem;
+      color: $main-color-4;
+      font-weight: 300;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+        }
+      }
+    }
+  
+    button {
+      font-family: $font-family-5;
+      font-size: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      background-color: $main-color-1;
+      border: none;
+      color: $main-color-4;
+      font-weight: 300;
+      cursor: pointer;
+    }
+  
+    .filter-indicator {
+      position: absolute;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      background-color: $accent-color-1;
+      border-radius: 50%;
+      transition: left 0.3s ease;
+    }
+  
+    .filter-indicator.academic {
+      left: 2px; 
+    }
+  
+    .filter-indicator.personal {
+      left: 175px; 
+    }
+  }
+  
+
+
+
+
+
   @media (max-width : 790px ) {
 
     .projects__title-1{
         font-size: 2.2rem;
-        padding-bottom: 14vw;
+        padding-bottom: 9vw;
     }
     .projects-grid {
         > * {
             flex: 1 calc(100%);
             margin-bottom: 14vw;
         }
+      }
+
+      .projects__filter{
+        padding-bottom: 9vw;
       }
   }
 
@@ -50,12 +119,57 @@
     .projects__title-1{
         font-size: 3vw;
     }
+
+    .projects__filter {
+
+      &-div{
+  
+        &-btn{
+          padding: 8px 30px;
+          border-radius: 30px;
+          &-span{
+        font-size: 1.8rem;
+          }
+        }
+      }
+    
+      button {
+        font-size: 1.8rem;
+        padding: 0 15px;
+  
+      }
+    
+      .filter-indicator {
+        top: 7px;
+        width: 35px;
+        height: 35px;
+        background-color: $accent-color-1;
+        border-radius: 50%;
+        transition: left 0.3s ease;
+      }
+    
+      .filter-indicator.academic {
+        left: 5px; 
+      }
+    
+      .filter-indicator.personal {
+        left: 322px; 
+      }
+    }
+    
   }
+
+
 
   @media (min-width : $mobile-breakpoint) and (max-width : 900px ) {
 
     .projects__title-1{
         font-size: 2.5rem;
+        padding-bottom: 13vw;
+    }
+
+    .projects__filter{
+      padding-bottom: 13vw;
     }
   }
 
@@ -63,6 +177,43 @@
 
     .projects__title-1{
         font-size: 1.8rem;
+    }
+
+    .projects__filter {
+
+      &-div{
+  
+        &-btn{
+          padding: 3px 12px;
+          border-radius: 30px;
+          &-span{
+        font-size: 0.8rem;
+          }
+        }
+      }
+    
+      button {
+        font-size: 0.6rem;
+        padding: 0 7px;
+  
+      }
+    
+      .filter-indicator {
+        top: 2px;
+        width: 15px;
+        height: 15px;
+        background-color: $accent-color-1;
+        border-radius: 50%;
+        transition: left 0.3s ease;
+      }
+    
+      .filter-indicator.academic {
+        left: 2px; 
+      }
+    
+      .filter-indicator.personal {
+        left: 117px; 
+      }
     }
   }
 
