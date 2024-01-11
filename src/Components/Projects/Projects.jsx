@@ -34,7 +34,7 @@ export default function Projects () {
             tags: ["HTML", "CSS", "JS"],
             image: SophieBluel,
             github: "https://github.com/lomi9/projet_3",
-            live: "https://lomi9.github.io/projet_3",
+            live: "",
             description : "Développement d'un site web dynamique pour une architecte d'intérieur, intégrant une galerie de projets, une page d'authentification administrateur et une modale d'upload média avec JavaScript."
 
         },
@@ -74,7 +74,7 @@ export default function Projects () {
             tags: ["REACT", "SASS", "GSAP"],
             image: Portfolio,
             github: "https://github.com/lomi9/portfolio",
-            live: "lien_vers_version_live",
+            live: "https://loriane-michel.com/",
             description : "Création de mon portfolio personnel en utilisant React et SASS, présentant une interface utilisateur responsive, mettant en valeur mes projets et compétences en développement web."
 
         },
