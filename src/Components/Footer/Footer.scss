@@ -26,3 +26,30 @@
         }
     }
 }
+
+
+@media (min-width : $mobile-breakpoint) and (max-width : $tab-breakpoint) {
+    .footer {
+        &__content{
+            &-logo{
+                width: 17vw;
+            }
+            &-text{
+                font-size: 2vw;
+            }
+        }
+    }
+}
+
+@media (max-width : $mobile-breakpoint) {
+    .footer {
+        &__content{
+            &-logo{
+                width: 20vw;
+            }
+            &-text{
+                font-size: 3vw;
+            }
+        }
+    }
+}
