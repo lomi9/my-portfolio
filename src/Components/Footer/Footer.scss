@@ -15,6 +15,21 @@
             display: flex;
             justify-content: center;
         }
+        &-link{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 0.2vw;
+            &-a{
+                color: $accent-color-2;
+                cursor: pointer;
+
+                &-linkedin{
+                    font-size: 2vw;
+
+                }
+            }
+        }
         &-text{
             color: $main-color-1;
             font-size: 1vw;
@@ -36,6 +51,9 @@
             }
             &-text{
                 font-size: 2vw;
+            }
+            &-link-a-linkedin{
+                font-size: 1rem;
             }
         }
     }
