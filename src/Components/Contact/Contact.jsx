@@ -48,7 +48,7 @@ export default function Contact() {
         <div className="contact">
 
         <div className='contact__title'>
-                <h2 className='contact__title-2'></h2>
+                <h2 className='contact__title-2'> </h2>
         </div>
 
         <form onSubmit={sendEmail} className="contact__form">
