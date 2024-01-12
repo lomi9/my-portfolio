@@ -58,10 +58,10 @@ export default function Presentation() {
                     <h2 ref={titleRef} className="presentation__content-description-title">Á PROPOS DE MOI</h2>
                     <div className="presentation__content-description-text">
                         <p ref={textRef1} className="presentation__content-description-text-p">
-                        Je suis Loriane, une passionnée de développement web venant tout juste de terminer avec succès une année de formation de développeur web avec OpenClassrooms. Je recherche activement une opportunité de contrat d’apprentissage, stage, ou toute autre opportunité de formation au sein d’une entreprise dynamique.
+                        Je suis Loriane, une passionnée de développement web venant tout juste de terminer avec succès une année de formation de développeur web avec OpenClassrooms. Je recherche activement une opportunité de contrat d’apprentissage, stage, ou toute autre dispositif de formation au sein d’une entreprise dynamique.
                         </p>
                         <p ref={textRef2} className="presentation__content-description-text-p">
-                        Mon objectif : Renforcer mes compétences en tant que développeuse front-end ou full stack, et surtout continuer d’apprendre. En effet, j’aime passer des heures à créer des designs avec CSS, créer des composants avec React, ou dynamiser une page avec JavaScript. J’aime également le back-end, pour lequel j’aimerais également me former.
+                        Mon objectif : Renforcer mes compétences en tant que développeuse front-end ou full stack, et surtout continuer d’apprendre. En effet, j’aime passer des heures à créer des designs avec CSS, créer des composants avec React, ou dynamiser une page avec JavaScript. J’aime également le back-end, pour lequel je souhaiterai également me former.
                         </p>
                         <p ref={textRef3} className="presentation__content-description-text-p">
                         Sortant tout juste de formation, je ne passerai certainement pas tous les tests immédiatement. Cependant, étant quelqu’un d’autonome et très persévérante, je sais rechercher les solutions à mes problèmes afin de les résoudre. Si vous cherchez une personne motivée, et jamais lassée d’apprendre, n’hésitez pas à me contacter.
