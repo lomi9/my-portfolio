@@ -69,7 +69,7 @@ export default function Projects () {
 
         },
         {
-            category : "academic",
+            category : "personnal",
             title: "Mon Portfolio",
             tags: ["REACT", "SASS", "GSAP"],
             image: Portfolio,
@@ -91,11 +91,11 @@ export default function Projects () {
         {
             category : "personal",
             title: "Halima Garden (en cours)",
-            tags: ["REACT", "SASS"],
+            tags: ["REACT", "SASS", "Node.JS"],
             image: halimaGarden,
             github: "https://github.com/lomi9/halima-garden",
             live: "",
-            description : "Application de vente d'huiles marrocaines (huiles alimentaires et de beauté) avec une page de connexion utilisateur et une modale administrateur d'ajout de produits."
+            description : "Application web d'e-commerce (vente de produits marocains) avec l'implémentation de l'authentification sécurisée de l'utilisateur."
 
         },
 
