@@ -9,7 +9,7 @@ export default function Footer () {
             <div className="footer__content">
                 <img src={logo} alt="logo - Loriane MICHEL" className="footer__content-logo"/>
                 <div className="footer__content-link">
-                <a target="_blank" rel="noopener noreferrer" href="www.linkedin.com/in/loriane-michel-b791a6268" className="footer__content-link-a"><FontAwesomeIcon icon={faLinkedin} className="footer__content-link-a-linkedin"/></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/loriane-michel-b791a6268" className="footer__content-link-a"><FontAwesomeIcon icon={faLinkedin} className="footer__content-link-a-linkedin"/></a>
                 </div>
                 <span className="footer__content-text">Dernière mise à jour : Janvier 2024</span>
             </div>
