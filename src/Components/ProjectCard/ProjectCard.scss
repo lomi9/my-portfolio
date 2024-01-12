@@ -115,6 +115,7 @@
           font-family: $font-family-5;
           color: $card-text-color-1;
           width: 100%;
+          padding-right: 4%;
 
           }
       }
@@ -168,7 +169,8 @@
 .tag{
   display: flex;
   flex-wrap: wrap;
-  gap: 2%;
+  gap: 5%;
+  padding-right: 5%;
     }
 
 .tag-item{
@@ -308,6 +310,11 @@
       font-size: 2.3rem;
     }
   }
+
+  .tag{
+    gap: 5%;
+    padding-right: 5%;
+  }
   .tag-item{
     font-size: 1.1rem;
     width: 117px;
@@ -330,7 +337,7 @@
 
 
 
-@media (min-width : 790px) and ( max-width : 1800px ){
+@media (min-width : 1550px) and ( max-width : 1800px ){
 
   .tag-item{
     font-size: 0.8rem;
@@ -347,11 +354,15 @@
       padding-bottom: 0;
     }
   }
+  .tag{
+    gap: 5%;
+    padding-right: 5%;
+  }
 
 
 }
 
-@media  (min-width : 690px ) and ( max-width : 1550px ){
+@media  (min-width : 1300px ) and ( max-width : 1550px ){
 
   .card__description{
     &-links-btn-icon{
@@ -381,7 +392,7 @@
   }
 }
 
-@media (min-width : 790px) and ( max-width : 1300px ){
+@media (min-width : 1100px) and ( max-width : 1300px ){
 
   .card__description{
     &-links-btn-icon{
@@ -423,7 +434,7 @@
   }
 }
 
-@media (min-width : 790px) and ( max-width : 1100px ){
+@media (min-width : 980px) and ( max-width : 1100px ){
 
   .card__description{
     &-links-btn-icon{
@@ -440,12 +451,15 @@
       padding: 2% 0 9% 11%;
     }
   }
+
+  .tag{
+    gap: 5%;
+  }
   .tag-item{
-    font-size: 0.5rem;
-    width: 41px;
-    height: 14px;
+    font-size: 0.6rem;
+    width: 55px;
+    height: 20px;
     border-radius: 4px;
-    padding: 0.1rem 0.2rem;
  
   }
   .flip-button{
@@ -486,10 +500,10 @@
 
   .card__description{
     &-links-btn-icon{
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
     &-content-title{
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       padding-bottom: 0;
     }
   }
@@ -503,8 +517,43 @@
     &-titleback{
       font-size: 0.8rem;
       padding-bottom: 5px;
-
     }
+}
+.flip-button {
+  width: 30px;
+  height: 30px;
+  &-icon{
+    font-size: 0.8rem;
+  }
+}
+
+.flip-button-back{
+  width: 50px;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  &-icon{
+    font-size: 0.8rem;
+  }
+}
+
+.tag{
+  gap: 5%;
+  padding-left: 7%;
+  padding-top: 5%;
+}
+
+.tag-item{
+  width: 45px;
+  height: 15px;
+  border-radius: 5px;
+}
+
+
+
+.card__back-right-text-p{
+  font-size: 0.5rem;
 }
 }
 
@@ -518,6 +567,41 @@
 .flip-card-back {
   height: 33vw;
 }
+
+.card__description{
+  &-links-btn-icon{
+    font-size: 1.7rem;
+  }
+  &-tags{
+    padding: 0 5% 5% 5%;
+  }
+}
+
+.tag {
+  gap: 5%;
+}
+.tag-item{
+  font-size: 0.7rem;
+  width: 70px;
+  height: 24px;
+  border-radius: 6px;
+
+}
+.card__description-content{
+  &-titleback{
+    font-size: 1.3rem;
+  }
+  &-textback{
+    font-size: 0.8rem;
+  }
+}
+.card__back-right-text-p{
+  font-size: 0.8rem;
+}
+.card__description-content-title{
+    font-size: 1.4rem;
+  }
+
 }
 
 @media (max-width: 690px ) {
@@ -536,12 +620,21 @@
     font-size: 2rem;
   }
   &-content-title{
-    font-size: 1.6rem;
-    padding-bottom: 10%;
+    font-size: 1.4rem;
   }
+  &-tags{
+    padding: 0 5% 5% 5%;
+  }
+}
+
+.tag {
+  gap: 5%;
 }
 .tag-item{
   font-size: 0.7rem;
+  width: 70px;
+  height: 24px;
+  border-radius: 6px;
 
 }
 .card__description-content{
