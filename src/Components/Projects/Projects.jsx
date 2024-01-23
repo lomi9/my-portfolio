@@ -11,6 +11,7 @@ import MonVieuxGrimoire from "../../assets/mon-vieux-grimoire.png";
 import Portfolio from "../../assets/portfolio.png";
 import casaMarerio from "../../assets/casa-marerio.webp";
 import halimaGarden from "../../assets/halima-garden.webp";
+import mtechenergie from "../../assets/m-tech-energie.png";
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
@@ -86,6 +87,16 @@ export default function Projects () {
             github: "https://github.com/lomi9/casa-marerio",
             live: "https://casa-marerio.com",
             description : "Création de la page de présentation et de réservation pour la location d'un logement de vacances, en utilisant React, sass et i18n pour les différentes langues. Le site est responsive."
+
+        },
+        {
+            category : "personal",
+            title: "M-Tech ENERGIE (en cours)",
+            tags: ["REACT", "SASS", "GSAP"],
+            image: mtechenergie,
+            github: "https://github.com/lomi9/tech-energie",
+            live: "https://zesty-toffee-d6d7ec.netlify.app",
+            description : "Création d'un site web vitrine pour présenter l'entreprise M-Tech energie qui souhaite que l'utilisateur dissocie bien ses deux activités."
 
         },
         {
