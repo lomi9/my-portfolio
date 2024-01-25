@@ -21,47 +21,48 @@ export default function ProjectCard ({ project }) {
     return (
         <>
         <div className="flip_container-1">
-        <div className="flip_container-2">
-        <div className={`flip-card ${ isFlipped ? "flipped" : "" }`} >
-        <div className='flip-card-inner'>
-        <div className="card-border flip-card-front" >
-        <div className="card">
-            <div className="card__description">
-                <div className="card__description-links">
-                    <div className="card__description-links-border">
-                    <a target="_blank" rel="noopener noreferrer" href={project.github} className="card__description-links-btn"><FontAwesomeIcon icon={faGithub} className='card__description-links-btn-icon'/></a>
-                    {showLiveIcon && (
-                    <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn live-icon"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>
-                    )}
-                    </div>
-                </div>
-                <div className="card__description-content">
-                    <h3 className="card__description-content-title">{project.title}</h3>
-                </div>
-                <div className="card__description-tags">
-                <div className="tag">
-                    {project.tags.map(tag => (
-                        <span className="tag-item" key={tag}>{tag}</span>
-                    ))}
-                    </div>
-                    </div>
-            </div>
-            <div className="card__picture">
-                <div className="card__picture-container">
-                    <img  src={project.image}className="card__picture-img" alt="Capture d'écran du projet"/>
-                    <div className="card__picture-overlay">
-                        <button className="flip-button" onClick={handleFlip}>
-                        <FontAwesomeIcon icon={faArrowRightLong} className="flip-button-icon"/>
-                    </button></div>
-                </div>
+            <div className="flip_container-2">
+                <div className={`flip-card ${ isFlipped ? "flipped" : "" }`} >
+                    <div className='flip-card-inner'>
+                        <div className="card-border flip-card-front" >
+                            <div className="card">
+                                <div className="card__description">
+                                     <div className="card__description-links">
+                                        <div className="card__description-links-border">
+                                            <a target="_blank" rel="noopener noreferrer" href={project.github} className="card__description-links-btn"><FontAwesomeIcon icon={faGithub} className='card__description-links-btn-icon'/></a>
+                                            {showLiveIcon && (
+                                            <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn live-icon"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className="card__description-content">
+                                        <h3 className="card__description-content-title">{project.title}</h3>
+                                    </div>
+                                    <div className="card__description-tags">
+                                        <div className="tag">
+                                            {project.tags.map(tag => (
+                                            <span className="tag-item" key={tag}>{tag}</span>
+                                             ))}
+                                        </div>
+                                     </div>
+                                </div>
+                                <div className="card__picture">
+                                    <div className="card__picture-container">
+                                            <img  src={project.image}className="card__picture-img" alt="Capture d'écran du projet"/>
+                                            <div className="card__picture-overlay">
+                                                <button className="flip-button" onClick={handleFlip}>
+                                                    <FontAwesomeIcon icon={faArrowRightLong} className="flip-button-icon"/>
+                                                </button>
+                                            </div>
+                                    </div>
 
-            </div>
-        </div>
-        </div>
-        <div className="card-border flip-card-back">
-        <div className="card-content card-content-back card">
-            <div className="card__description">
-                <div className="card__description-links">
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-border flip-card-back">
+                            <div className="card-content card-content-back card">
+                                <div className="card__description">
+                                    <div className="card__description-links">
                     <a target="_blank" rel="noopener noreferrer" href={project.github} className="card__description-links-btn icon-hover"><FontAwesomeIcon icon={faGithub} className='card__description-links-btn-icon'/></a>
                     { showLiveIcon && (
                     <a target="_blank" rel="noopener noreferrer" href={project.live} className="card__description-links-btn icon-hover live-icon"><FontAwesomeIcon icon={faCirclePlay} className='card__description-links-btn-icon'/></a>

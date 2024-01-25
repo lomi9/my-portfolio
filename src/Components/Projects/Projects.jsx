@@ -91,22 +91,22 @@ export default function Projects () {
         },
         {
             category : "personal",
+            title: "Halima Garden (en cours)",
+            tags: ["API REST", "Node.JS", "REACT", "Firebase"],
+            image: halimaGarden,
+            github: "https://github.com/lomi9/halima-garden",
+            live: "",
+            description : "Application web d'e-commerce (vente de produits marocains) avec l'implémentation de l'authentification sécurisée de l'utilisateur."
+
+        },
+        {
+            category : "personal",
             title: "M-Tech ENERGIE (en cours)",
             tags: ["REACT", "SASS", "GSAP"],
             image: mtechenergie,
             github: "https://github.com/lomi9/tech-energie",
             live: "https://zesty-toffee-d6d7ec.netlify.app",
-            description : "Création d'un site web vitrine pour présenter l'entreprise M-Tech energie qui souhaite que l'utilisateur dissocie bien ses deux activités."
-
-        },
-        {
-            category : "personal",
-            title: "Halima Garden (en cours)",
-            tags: ["REACT", "SASS", "Node.JS"],
-            image: halimaGarden,
-            github: "https://github.com/lomi9/halima-garden",
-            live: "",
-            description : "Application web d'e-commerce (vente de produits marocains) avec l'implémentation de l'authentification sécurisée de l'utilisateur."
+            description : "Création d'un site web vitrine pour présenter l'entreprise M-Tech energie."
 
         },
 

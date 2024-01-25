@@ -1,45 +1,43 @@
 @import "../../styles/utilities.scss";
 
-
-.flip_container-1{
+.flip_container-1 {
   width: 100%;
   min-width: 300px;
   display: flex;
   justify-content: center;
 }
 
-
-
-
-
 /****  FLIP  ****/
 .flip-card {
-  perspective: 1000px;
+ -webkit-perspective: 1000px;
+ perspective: 1000px;
   width: $card-width;
   height: $card-height;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
 }
 
-.flip-card.flipped {
+.flip-card.flipped .flip-card-inner{
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
 .flip-card-inner {
   width: 100%;
   height: 100%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
-
-/*** FLIPPED ***/ 
 
 .flip-card-front,
 .flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   width: 100%;
   height: $card-height;
   position: absolute;
-  backface-visibility: hidden;
   border-radius: 19px;
   padding: 1px;
   box-shadow: 0 10px 20px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
@@ -47,8 +45,11 @@
 }
 
 .flip-card-back {
+ -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+
+
 
 /**** FRONT CONTENT ****/
 .card { 
@@ -189,7 +190,6 @@
 }
 
 .flip-button {
-  visibility: hidden;
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -282,7 +282,6 @@
 }
 
 .flip-button-back{
-  visibility: hidden;
   display: flex;
   flex-wrap: wrap;
   align-self: flex-end;
@@ -465,7 +464,6 @@
  
   }
   .flip-button{
-    visibility: hidden;
     width : 30px;
     height: 30px;
     padding: 5px;
@@ -492,7 +490,6 @@
   }
 
   .flip-button-back{
-    visibility: hidden;
 
     &-icon{
       font-size: 0.8rem;
@@ -524,7 +521,6 @@
     }
 }
 .flip-button {
-  visibility: hidden;
   width: 30px;
   height: 30px;
   &-icon{
@@ -533,7 +529,6 @@
 }
 
 .flip-button-back{
-  visibility: hidden;
   width: 50px;
   padding: 10px;
   border-top-left-radius: 20px;
@@ -733,7 +728,6 @@
   }
 
   .flip-button{
-    visibility: hidden;
     width : 30px;
     height: 30px;
     padding: 5px;
@@ -759,7 +753,6 @@
   }
 
   .flip-button-back{
-    visibility: hidden;
 
     &-icon{
       font-size: 0.8rem;
